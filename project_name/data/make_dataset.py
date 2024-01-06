@@ -1,30 +1,36 @@
+from typing import Iterator
+
 import click
 import sqlite3
 import pandas as pd
+import numpy as np
+from pandas import DataFrame
 
 
 def get_data_from_database(database_dir: str, table: str):
     """
-    Function that extract data from database
+    Function that extracts data from database
 
     Args:
         database_dir (string): directory to the database containing the raw data
         table (string): The table to extract data from in the database
 
     Returns:
-        table (DataFrame): DataFrame containing data from the selected table in the database
+        body_text (Numpy): Numpy containing the body text from the selected table in the database
     """
 
     conn = sqlite3.connect(database_dir)
-    query = f'SELECT * FROM {table}'
+    query = f'select body_text from {table}'
 
-    table = pd.read_sql_query(query, conn)
+    body_text = pd.read_sql_query(query, conn)
+    body_text = body_text.to_numpy()
+
     conn.close()
 
-    return table
+    return body_text
 
 
 if __name__ == '__main__':
     # Get the data and process it
-    table = get_data_from_database("data/raw/wikibooks.sqlite", "en")
-    table.to_csv('data/processed/data.csv', index=False)
+    body_text = get_data_from_database("data/raw/wikibooks.sqlite", "en")
+    np.save("data/raw/body_text.npy", body_text)

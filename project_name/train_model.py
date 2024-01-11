@@ -7,17 +7,21 @@ import pandas as pd
 from torch.utils.data import DataLoader, random_split, RandomSampler, SequentialSampler
 from models.model import Model
 from data.dataclass import GPT2Dataset
+from omegaconf import OmegaConf
+
+# loading
+config = OmegaConf.load('project_name/config.yaml')
 
 parameter ={
-    # some parameters I cooked up that work reasonably well
-    "epochs" : 5,
-    "learning_rate" : 5e-4,
-    "warmup_steps" : 1e2,
-    "epsilon" : 1e-8,
-    "batch_size": 2,
+    "epochs" : config['hyperparameters']['epochs'],
+    "learning_rate" : config['hyperparameters']['learning_rate'],
+    "warmup_steps" : config['hyperparameters']['warmup_steps'],
+    "epsilon" : config['hyperparameters']['epsilon'],
+    "batch_size": config['hyperparameters']['batch_size'],
     # this produces sample output every 100 steps
-    "sample_every" : 100
+    "sample_every" : config['hyperparameters']['sample_every']
 }
+
 def format_time(elapsed):
     return str(datetime.timedelta(seconds=int(round((elapsed)))))
 

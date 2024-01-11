@@ -1,5 +1,7 @@
-torch >= 1.0.2
-click >= 8.1.7
 pandas >= 2.1.4
 transformers >= 4.36.2
 datasets >= 2.16.1
+torch >= 2.1.0
+numpy >= 1.26.0
+matplotlib >= 3.8.2
+click >= 8.1.7

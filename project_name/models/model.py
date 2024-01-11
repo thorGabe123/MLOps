@@ -3,6 +3,8 @@ import random
 from transformers import GPT2LMHeadModel,  GPT2Tokenizer, GPT2Config, GPT2LMHeadModel
 from transformers import AdamW, get_linear_schedule_with_warmup
 
+
+
 class Model(torch.nn.Module):
     def __init__(self, lr=5e-4, eps=1e-8):
         super().__init__()
@@ -20,16 +22,19 @@ class Model(torch.nn.Module):
         outputs = self.model(input_ids=input_ids, attention_mask=attention_mask, labels=labels, oken_type_ids=None)
         return outputs
     
-    def generate(self):
+    def generate(self, inputs,):
         # Use the generate method from the GPTmodel model
+
         sample_outputs = self.model.generate(
-                                    bos_token_id=random.randint(1,30000),
+                                    inputs=inputs,
+                                    pad_token_id=self.tokenizer.eos_token_id,
                                     do_sample=True,   
                                     top_k=50, 
                                     max_length = 200,
                                     top_p=0.95, 
                                     num_return_sequences=1)
-        generated_text = self.tokenizer.decode(sample_outputs, skip_special_tokens=True)
+        
+        generated_text = self.tokenizer.decode((sample_outputs.tolist())[0], skip_special_tokens=True)
         return generated_text
 
     def configure_optimizers(self):

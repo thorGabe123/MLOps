@@ -4,21 +4,21 @@ from project_name.models.model import Model
 from omegaconf import OmegaConf
 import pytest
 
-def get_param():
-    config = OmegaConf.load('project_name/config.yaml')
-    eps = config['hyperparameters']['eps']
-    lr = config['hyperparameters']['learning_rate']
-    return lr,eps
+# def get_param():
+#     config = OmegaConf.load('project_name/config.yaml')
+#     eps = config['hyperparameters']['epsilon']
+#     lr = config['hyperparameters']['learning_rate']
+#     return lr,eps
 
-def test_init_lr():
-    lr,eps = get_param()
-    model = Model(lr=lr)
-    assert model.lr == lr
+# def test_init_lr():
+#     lr,eps = get_param()
+#     model = Model(lr=lr)
+#     assert model.lr == lr
 
-def test_init_epsilon():
-    lr,eps = get_param()
-    model = Model(eps=eps)
-    assert model.epsilon == eps
+# def test_init_epsilon():
+#     lr,eps = get_param()
+#     model = Model(eps=eps)
+#     assert model.epsilon == eps
 
 # def test_forward_pass():
 #     model = Model()

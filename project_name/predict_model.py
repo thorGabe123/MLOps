@@ -3,11 +3,11 @@ from project_name.models.model import Model
 
 
 
-def make_prediction(model, input_prompt, max_output_length):
+def make_prediction(model, tokenizer, input_prompt, max_length):
     indexed_tokens = tokenizer.encode(input_prompt)
     tokens_tensor = torch.tensor([indexed_tokens])
     prediction = model.generate(inputs=tokens_tensor, 
-                                max_output_length=max_output_length,
+                                max_length=max_length,
                                 num_return_sequences=1)
 
     return prediction

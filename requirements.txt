@@ -1,3 +1,4 @@
+-e .
 pandas >= 2.1.4
 transformers >= 4.36.2
 datasets >= 2.16.1

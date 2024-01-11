@@ -3,6 +3,7 @@ from project_name.models.model import Model
 import click
 
 
+
 def make_prediction(model, input_prompt, max_output_length):
     """
 

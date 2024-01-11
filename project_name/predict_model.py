@@ -1,5 +1,5 @@
 import torch
-from models.model import Model
+from project_name.models.model import Model
 import click
 
 

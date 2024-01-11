@@ -39,7 +39,13 @@ clean:
 ## Process raw data into processed data
 data:
 	python $(PROJECT_NAME)/data/make_dataset.py
-
+## Train the dataset 
+train: requirements
+	$(PYTHON_INTERPRETER) $(PROJECT_NAME)/train_model.py
+## Predict the data
+predict: requirements
+	$(PYTHON_INTERPRETER) $(PROJECT_NAME)/predict_model.py
+	
 #################################################################################
 # Documentation RULES                                                           #
 #################################################################################

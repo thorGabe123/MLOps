@@ -1,5 +1,5 @@
 # Base image
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 # install python
 RUN apt update && \
@@ -16,4 +16,4 @@ WORKDIR /
 RUN pip install -r requirements.txt --no-cache-dir
 RUN pip install . --no-deps --no-cache-dir
 
-ENTRYPOINT ["python", "-u", "<project_name>/train_model.py"]
+ENTRYPOINT ["python", "-u", "project_name/train_model.py"]

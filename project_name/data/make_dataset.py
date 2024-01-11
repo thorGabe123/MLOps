@@ -21,5 +21,5 @@ def process_data(rawDataset):
 if __name__ == '__main__':
     # Get the data and process it
     df = process_data(get_data())
-    df.to_csv('data/processed/processed.csv',index=False)
+    df.to_csv('data/processed/processed_data.csv',index=False)
     pass

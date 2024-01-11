@@ -10,14 +10,14 @@ lr=config['hyperparameters']['learning_rate']
 eps=config['hyperparameters']['epsilon']
 
 class Model(torch.nn.Module):
-    def __init__(self, lr=lr, eps=eps):
+    def __init__(self, lr=lr, eps=eps, model_version='gpt2'):
         super().__init__()
         
         # Load the GPTModel
-        configuration = GPT2Config.from_pretrained('gpt2', output_hidden_states=False)
-        self.model = GPT2LMHeadModel.from_pretrained("gpt2", config=configuration)
+        configuration = GPT2Config.from_pretrained(model_version, output_hidden_states=False)
+        self.model = GPT2LMHeadModel.from_pretrained(model_version, config=configuration)
         # Load the GPT tokenizer.
-        self.tokenizer = GPT2Tokenizer.from_pretrained('gpt2', bos_token='<|startoftext|>', eos_token='<|endoftext|>', pad_token='<|pad|>') #gpt2-medium)
+        self.tokenizer = GPT2Tokenizer.from_pretrained(model_version, bos_token='<|startoftext|>', eos_token='<|endoftext|>', pad_token='<|pad|>') #gpt2-medium)
         # Setting parameters
         self.lr = lr
         self.epsilon = eps
@@ -39,7 +39,7 @@ class Model(torch.nn.Module):
                                     do_sample=True,   
                                     top_k=50, 
                                     max_length = max_output_length,
-                                    top_p=0.95, 
+                                    top_p=0.90,
                                     num_return_sequences=num_return_sequences)
         for sample_output in sample_outputs:
             generated_text.append(self.tokenizer.decode(sample_output, skip_special_tokens=True))

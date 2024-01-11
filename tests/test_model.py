@@ -1,7 +1,6 @@
 import torch
 import sys
-sys.path.append('project_name/models')
-from model import Model
+from project_name.models.model import Model
 from omegaconf import OmegaConf
 import pytest
 

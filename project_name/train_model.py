@@ -5,8 +5,8 @@ import random
 import datetime
 import pandas as pd
 from torch.utils.data import DataLoader, random_split, RandomSampler, SequentialSampler
-from models.model import Model
-from data.dataclass import GPT2Dataset
+from project_name.models.model import Model
+from project_name.data.dataclass import GPT2Dataset
 from omegaconf import OmegaConf
 
 # loading
@@ -26,7 +26,7 @@ def format_time(elapsed):
     return str(datetime.timedelta(seconds=int(round((elapsed)))))
 
 def dataloader(tokenizer, batch_size):
-    df = pd.read_csv("data/processed/processed.csv") 
+    df = pd.read_csv("data/processed/processed_data.csv") 
     dataset = GPT2Dataset(df['text'], tokenizer, max_length=768)
     print(len(dataset))
     # Split into training and validation sets

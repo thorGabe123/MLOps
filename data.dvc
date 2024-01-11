@@ -1,6 +1,9 @@
 outs:
-- md5: d8abc34af7a514b9787dfb447bdf42cf.dir
-  size: 13009273408
-  nfiles: 7
+- md5: 88bef8b579d8155a916b6f59e9c40001
+  size: 281590792
   hash: md5
-  path: data
+  path: data/processed/processed_data.csv
+  cloud:
+    remote_storage:
+      etag: 08ccb1d389cdd583031001
+      version_id: '1704985267329228'

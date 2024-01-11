@@ -1,7 +1,7 @@
 # Group 30 - Text Generation using Natural Language Processing
 
 ## Overall goal of the project
-The goal of the project is to generate comprehensive paragraph continuing on an initial text prompt.
+The goal of the project is to fine-tune a model to generate comprehensive paragraphs continuing on an initial text prompt.
 
 ## What framework are you going to use?
 Working with NLP, we plan to use the Transformers framework.
@@ -10,10 +10,10 @@ Working with NLP, we plan to use the Transformers framework.
 We expect to start with a pretrained model and fine-tune it by training it on our data.
 
 ## What data are you going to run on?
-We utilize the english wikipedia dataset as found from https://www.kaggle.com/datasets/dhruvildave/wikibooks-dataset containing the text of each wikipedia page.
+We utilize a dataset of publicly available text books as found from https://huggingface.co/datasets/izumi-lab/open-text-books containing raw texts of the books.
 
 ## What deep learning models do you expect to use?
-We are going to use pretrained T5 text-to-text models as found at https://huggingface.co/docs/transformers/model_doc/t5, and fine-tune them by training them on our dataset. 
+We are going to use a pretrained GPT2 text-generating model as found at https://huggingface.co/gpt2, and fine-tune it by training on our dataset. 
 
 
 ## Project structure

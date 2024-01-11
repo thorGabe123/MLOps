@@ -1,5 +1,5 @@
 import torch
-from transformers import GPT2Tokenizer, GPT2LMHeadModel, GenerationMixin
+from transformers import GPT2Tokenizer, GPT2LMHeadModel
 import random
 
 

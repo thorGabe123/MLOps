@@ -23,7 +23,7 @@ class Model(torch.nn.Module):
         self.lr = lr
         self.epsilon = eps
 
-    def forward(self, input_ids, attention_mask, labels=None):     
+    def forward(self, input_ids, attention_mask, labels=None):
         outputs = self.model(input_ids=input_ids, attention_mask=attention_mask, labels=labels, oken_type_ids=None)
         return outputs
     

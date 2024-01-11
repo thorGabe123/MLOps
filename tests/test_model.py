@@ -21,14 +21,10 @@ def test_init_epsilon():
     model = Model(eps=eps)
     assert model.epsilon == eps
 
-# def test_init_tokenizer():
-#     model = Model(tokenizer=tokenizer)
-#     assert isinstance(model.tokenizer, tokenizer)
-
-# def test_forward_pass(input_ids, attention_mask):
-#     model = Model()
-#     outputs = model(input_ids=input_ids, attention_mask=attention_mask)
-#     assert outputs is not None
+def test_forward_pass():
+    model = Model()
+    outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+    assert outputs is not None
 
 # def test_forward_pass_invalid_inputs(input_ids, attention_mask):
 #     model = Model()

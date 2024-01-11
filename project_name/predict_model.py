@@ -1,5 +1,6 @@
 import torch
 from models.model import Model
+import click
 
 
 def make_prediction(model, input_prompt, max_output_length):
@@ -17,16 +18,20 @@ def make_prediction(model, input_prompt, max_output_length):
 
     indexed_tokens = model.tokenizer.encode(input_prompt)
     tokens_tensor = torch.tensor([indexed_tokens])
-    prediction = model.generate(inputs=tokens_tensor, 
-                                max_output_length=max_output_length,
-                                num_return_sequences=1)
+    prediction = model.generate(inputs=tokens_tensor, max_output_length=max_output_length, num_return_sequences=1)
 
     return prediction[0]
 
 
-
-if __name__ == '__main__':
-    model = Model(model_version="data/processed/MLOps data")
-    prompt = "What is the fastest car in the"
-    predicted_text = make_prediction(model, prompt, 100)
+@click.command()
+@click.option("--model_version", default="gpt2", help="gpt2 or path to finetuned model")
+@click.option("--prompt", default="What is the fastest car in the", help="Input prompt for the model")
+@click.option("--output_length", default=100)
+def predict(model_version, prompt, output_length):
+    model = Model(model_version=model_version)
+    predicted_text = make_prediction(model, prompt, output_length)
     print(predicted_text)
+
+
+if __name__ == "__main__":
+    predict()

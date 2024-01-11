@@ -2,11 +2,16 @@ import torch
 import random
 from transformers import GPT2LMHeadModel,  GPT2Tokenizer, GPT2Config, GPT2LMHeadModel
 from transformers import AdamW, get_linear_schedule_with_warmup
+from omegaconf import OmegaConf
 
+# loading
+config = OmegaConf.load('project_name/config.yaml')
 
+lr=config['hyperparameters']['learning_rate']
+eps=config['hyperparameters']['epsilon']
 
 class Model(torch.nn.Module):
-    def __init__(self, lr=5e-4, eps=1e-8):
+    def __init__(self, lr=lr, eps=eps):
         super().__init__()
         
         # Load the GPTModel

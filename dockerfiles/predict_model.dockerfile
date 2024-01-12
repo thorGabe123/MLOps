@@ -18,4 +18,4 @@ RUN pip install -e .
 
 RUN mkdir -p /data/processed
 RUN make data 
-ENTRYPOINT ["python", "-u", "project_name/predict_model.py"] 
+ENTRYPOINT ["python", "-u", "project_name/predict_model.py"]

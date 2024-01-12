@@ -1,6 +1,18 @@
 outs:
-- md5: d8abc34af7a514b9787dfb447bdf42cf.dir
-  size: 13009273408
-  nfiles: 7
-  hash: md5
+- hash: md5
   path: data
+  files:
+  - relpath: processed/.gitignore
+    md5: abf051e0b6f25c7a9c9b919d292be755
+    size: 20
+    cloud:
+      remote_storage:
+        etag: 08bfbb90eec0d683031001
+        version_id: '1705016348122559'
+  - relpath: processed/processed_data.csv
+    md5: 88bef8b579d8155a916b6f59e9c40001
+    size: 281590792
+    cloud:
+      remote_storage:
+        etag: 08b2dd85eec0d683031001
+        version_id: '1705016347946674'

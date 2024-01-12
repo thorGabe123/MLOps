@@ -105,7 +105,7 @@ end of the project.
 >
 > Answer:
 
-Group 30
+--- question 1 fill here ---
 
 ### Question 2
 > **Enter the study number for each member in the group**
@@ -142,9 +142,9 @@ Group 30
 >
 > Answer length: 100-200 words
 >
-> Example:
-> *We used ... for managing our dependencies. The list of dependencies was auto-generated using ... . To get a*
-> *complete copy of our development environment, one would have to run the following commands*
+> We used a requirements.txt file for managing our dependencies. The list of dependencies was auto-generated using the console line pip freeze > requirements in our virtual environment. For a new team member to aquire this environment they would only have to set up a virtual environment, install the dependencies descriped in the requirements.txt file, and clone the GitHub repository.
+> 
+> 
 >
 > Answer:
 

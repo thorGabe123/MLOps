@@ -1,3 +1,5 @@
+import sys
+sys.path.append('C:\\Users\\min\\Documents\\GitHub\\MLOps')
 from project_name.predict_model import make_prediction
 from project_name.models.model import Model
 
@@ -13,3 +15,4 @@ def test_pred():
     predicted_text = make_prediction(model, prompt, 20)
 
     assert len(predicted_text) > len(prompt), "No prediction added to the prompt"
+    assert type(predicted_text) == str

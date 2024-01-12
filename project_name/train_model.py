@@ -71,6 +71,11 @@ def train():
     # Load the data
     train_dataloader, valid_dataloader = dataloader(tokenizer, parameter["batch_size"])
 
+    # Tell pytorch to run this model on the GPU.
+    device = torch.device("cuda")
+    model = model.to(device)
+    model.cuda()
+
     # this step is necessary because I've added some tokens (bos_token, etc) to the embeddings
     # otherwise the tokenizer and model tensors won't match up
     model.resize_token_embeddings(len(tokenizer))

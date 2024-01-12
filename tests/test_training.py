@@ -3,34 +3,16 @@ import random
 import sys
 from project_name.train_model import parameter, train, dataloader, sample, valid, batch_train
 from project_name.models.model import Model
+from hydra import initialize, compose
 
-# def test_train_epoch():
-#     model=Model()
-#     train_dataloader, valid_dataloader = dataloader(model.tokenizer, parameter["batch_size"])
-#     total_steps = len(train_dataloader) * parameter["epochs"]
-
-#     for epoch_i in range(0, parameter["epochs"]):
-#         # Train model
-#         train()
-
-#         # Get validation loss
-#         avg_val_loss, validation_time = valid(model,valid_dataloader)
-#         assert avg_val_loss <= 0
-
-# def test_sample():
-#     model=Model()
-#     sample(model)
-
-#     generated_text = model.generate(bos_token_id=random.randint(1,30000), num_return_sequences=3)
-#     assert generated_text is not None
-
-# def test_valid_loss():
-#     model=Model()
-#     # Get validation loss
-#     avg_val_loss, validation_time = valid(model,valid_dataloader)
-#     assert avg_val_loss <= 0
-
-# def test_batch_train_loss():
-#     model, batch
-#     loss = batch_train(model, batch)
-#     assert loss is not None
+def test_valid():
+    with initialize(version_base=None, config_path="../project_name"):
+        cfg = compose(config_name="config")
+        model = Model(lr=cfg["hyperparameters"]["learning_rate"], eps=cfg["hyperparameters"]["epsilon"])
+        tokenizer = model.tokenizer
+        model.resize_token_embeddings(len(tokenizer))
+        train_dataloader, valid_dataloader = dataloader(tokenizer, parameter["batch_size"])
+        # Get validation loss
+        avg_val_loss, validation_time = valid(model,valid_dataloader)
+        assert avg_val_loss <= 0
+        assert validation_time > 0

@@ -15,3 +15,4 @@ def test_pred():
     predicted_text = make_prediction(model, prompt, 20)
 
     assert len(predicted_text) > len(prompt), "No prediction added to the prompt"
+    assert type(predicted_text) == str

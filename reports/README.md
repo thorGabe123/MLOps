@@ -162,8 +162,8 @@ We used a requirements.txt file for managing our dependencies. The list of depen
 > *because we did not use any ... in our project. We have added an ... folder that contains ... for running our*
 > *experiments.*
 > Answer:
+The project structure is based on the cookiecutter template with minimal changes. We've filled 'dockerfiles', 'models', 'notebooks', 'project_name', and 'tests', while removing 'docs'.[Notes: if there is nothing to do with docs, we can remove that. and btw, should we removed "model1-open-text-books" folder?] The 'dockerfiles' directory contains container build scripts, 'models' stores trained model checkpoints, and 'tests' contains test cases and scripts for project testing. The 'project_name' folder includes the project's source code with essential configuration files for model training. Within 'project_name', three folders are organized for data processing, model storage, and visualization. The 'notebooks' section features a Jupyter notebook showing a rough version of the 'project_name' code.
 
---- question 5 fill here ---
 
 ### Question 6
 
@@ -237,6 +237,9 @@ We implemented 4 test. We are testing that data can be loaded, that a model be i
 > *pipeline*
 >
 > Answer:
+
+Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloaded, processed, and stored the refined data on Google Cloud using DVC for version control. However, 'dvc pull' became a bottleneck, taking more time than downloading and processing directly from Hugging Face. Therefore, we decided to run 'making_dataset.py' to efficiently generate processed data. While DVC offers robust version control for data management, we adjusted our strategy to prioritize time efficiency given the dynamic needs of our project in retrieving and processing datasets.
+
 
 --- question 10 fill here ---
 

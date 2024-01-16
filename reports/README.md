@@ -74,14 +74,14 @@ end of the project.
 
 * [x] Write unit tests related to the data part of your code
 * [x] Write unit tests related to model construction and or model training
-* [x] Calculate the coverage.
+* [ ] Calculate the coverage.
 * [x] Get some continuous integration running on the github repository
 * [ ] Create a data storage in GCP Bucket for you data and preferable link this with your data version control setup
 * [x] Create a trigger workflow for automatically building your docker images
 * [ ] Get your model training in GCP using either the Engine or Vertex AI
 * [ ] Create a FastAPI application that can do inference using your model
 * [ ] If applicable, consider deploying the model locally using torchserve
-* [x] Deploy your model in GCP using either Functions or Run as the backend
+* [ ] Deploy your model in GCP using either Functions or Run as the backend
 
 ### Week 3
 
@@ -105,7 +105,7 @@ end of the project.
 >
 > Answer:
 
---- question 1 fill here ---
+Group 30
 
 ### Question 2
 > **Enter the study number for each member in the group**
@@ -116,7 +116,7 @@ end of the project.
 >
 > Answer:
 
---- question 2 fill here ---
+s194638, 
 
 ### Question 3
 > **What framework did you choose to work with and did it help you complete the project?**
@@ -129,7 +129,7 @@ end of the project.
 >
 > Answer:
 
---- question 3 fill here ---
+We used the third-part framework Transformers in our project. We used the functionality load_dataset from the datasets package to load a dataset from the Hugging Face sit. Furthermore did we use different functionalities from the transformer package to get config, pre-trrained model and tokenizer of the GPT2 model. We also got our optimizer AdamW from the Transformer package.
 
 ## Coding environment
 
@@ -142,13 +142,13 @@ end of the project.
 >
 > Answer length: 100-200 words
 >
-> We used a requirements.txt file for managing our dependencies. The list of dependencies was auto-generated using the console line pip freeze > requirements in our virtual environment. For a new team member to aquire this environment they would only have to set up a virtual environment, install the dependencies descriped in the requirements.txt file, and clone the GitHub repository.
+> 
 > 
 > 
 >
 > Answer:
 
---- question 4 fill here ---
+We used a requirements.txt file for managing our dependencies. The list of dependencies was auto-generated using the console line pip freeze > requirements in our virtual environment. For a new team member to aquire this environment they would only have to set up a virtual environment, install the dependencies descriped in the requirements.txt file, and clone the GitHub repository.
 
 ### Question 5
 
@@ -193,7 +193,7 @@ end of the project.
 >
 > Answer:
 
---- question 7 fill here ---
+We implemented 4 test. We are testing that data can be loaded, that a model be initialized, that a model can be tested and that the model can make predictions. 
 
 ### Question 8
 

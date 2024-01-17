@@ -18,3 +18,9 @@ def test_format_time():
     elapsed = format_time(time.time())
     assert type(elapsed) == str
     assert re.search(r"\d*:\d*:\d*", elapsed)
+
+def test_training():
+    model = Model()
+    model.training = 0
+    model.train()
+    assert model.training == 1

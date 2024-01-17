@@ -114,9 +114,9 @@ Group 30
 >
 > *sXXXXXX, sXXXXXX, sXXXXXX*
 >
-> Answer:
+> Answer: 
 
-s194638, 
+s203861, s232855, s194638, s232909, s232268
 
 ### Question 3
 > **What framework did you choose to work with and did it help you complete the project?**
@@ -142,10 +142,6 @@ We used the third-part framework Transformers in our project. We used the functi
 >
 > Answer length: 100-200 words
 >
-> 
-> 
-> 
->
 > Answer:
 
 We used a requirements.txt file for managing our dependencies. The list of dependencies was auto-generated using the console line pip freeze > requirements in our virtual environment. For a new team member to aquire this environment they would only have to set up a virtual environment, install the dependencies descriped in the requirements.txt file, and clone the GitHub repository.
@@ -162,6 +158,7 @@ We used a requirements.txt file for managing our dependencies. The list of depen
 > *because we did not use any ... in our project. We have added an ... folder that contains ... for running our*
 > *experiments.*
 > Answer:
+
 The project structure is based on the cookiecutter template with minimal changes. We've filled 'dockerfiles', 'models', 'notebooks', 'project_name', and 'tests', while removing 'docs'.[Notes: if there is nothing to do with docs, we can remove that. and btw, should we removed "model1-open-text-books" folder?] The 'dockerfiles' directory contains container build scripts, 'models' stores trained model checkpoints, and 'tests' contains test cases and scripts for project testing. The 'project_name' folder includes the project's source code with essential configuration files for model training. Within 'project_name', three folders are organized for data processing, model storage, and visualization. The 'notebooks' section features a Jupyter notebook showing a rough version of the 'project_name' code.
 
 

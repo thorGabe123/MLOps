@@ -316,7 +316,7 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
---- question 15 fill here ---
+For our project we developed two images: one for prediction and training respectively. An example on how to run the prediction docker image: `docker run predict_model:latest`. Link to one of our docker files: https://github.com/thorGabe123/MLOps/blob/main/dockerfiles/predict_model.dockerfile. We have set up registry in GCP holding docker images created for each push to main as a form of version control. 
 
 ### Question 16
 
@@ -331,7 +331,7 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
---- question 16 fill here ---
+Debugging method was dependent on group member as both Visual Studio Code and PyCharm was used. This was done by setting breakpoints at critical points to pause execution and allow us to see variables and step forward through the code line by line. Profiling was not used in our project but for continous development and work on this project it would have been a good idea to do so, in order to locate bottlenecks and optimize our code.
 
 ## Working in the cloud
 
@@ -347,8 +347,8 @@ To ensure the reproducibility of our experiments, we created a config file for o
 > *We used the following two services: Engine and Bucket. Engine is used for... and Bucket is used for...*
 >
 > Answer:
+
 We used the compute enginges for training our model remotely, and also the bucket to store data.
---- question 17 fill here ---
 
 ### Question 18
 
@@ -372,7 +372,7 @@ We used the compute enginges for training our model remotely, and also the bucke
 >
 > Answer:
 
---- question 19 fill here ---
+[GCP Bucket](figures/GCP_bucket.png)
 
 ### Question 20
 
@@ -392,7 +392,7 @@ We used the compute enginges for training our model remotely, and also the bucke
 >
 > Answer:
 
---- question 21 fill here ---
+[Cloud Build History](figures/cloud_build_history.png)
 
 ### Question 22
 

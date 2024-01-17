@@ -66,7 +66,7 @@ end of the project.
 * [x] Used Hydra to load the configurations and manage your hyperparameters
 * [ ] When you have something that works somewhat, remember at some point to to some profiling and see if
       you can optimize your code
-* [ ] Use Weights & Biases to log training progress and other important metrics/artifacts in your code. Additionally,
+* [x] Use Weights & Biases to log training progress and other important metrics/artifacts in your code. Additionally,
       consider running a hyperparameter optimization sweep.
 * [ ] Use Pytorch-lightning (if applicable) to reduce the amount of boilerplate in your code
 
@@ -79,15 +79,15 @@ end of the project.
 * [ ] Create a data storage in GCP Bucket for you data and preferable link this with your data version control setup
 * [x] Create a trigger workflow for automatically building your docker images
 * [ ] Get your model training in GCP using either the Engine or Vertex AI
-* [ ] Create a FastAPI application that can do inference using your model
+* [x] Create a FastAPI application that can do inference using your model
 * [ ] If applicable, consider deploying the model locally using torchserve
-* [ ] Deploy your model in GCP using either Functions or Run as the backend
+* [x] Deploy your model in GCP using either Functions or Run as the backend
 
 ### Week 3
 
 * [ ] Check how robust your model is towards data drifting
-* [ ] Setup monitoring for the system telemetry of your deployed model
-* [ ] Setup monitoring for the performance of your deployed model
+* [x] Setup monitoring for the system telemetry of your deployed model
+* [x] Setup monitoring for the performance of your deployed model
 * [ ] If applicable, play around with distributed data loading
 * [ ] If applicable, play around with distributed model training
 * [ ] Play around with quantization, compilation and pruning for you trained models to increase inference speed
@@ -220,7 +220,6 @@ We implemented 4 test. We are testing that data can be loaded, that a model be i
 >
 > Answer:
  Yes, we used both branches and pull requests in our project. Each member in our group has a branch where we can work independently on different part of our project without interference with main developmet line. Isolated environment allows each developer experiment new ideas without affecting the main codebase, if the experimrnt successed, the change can be merged back into master branch. Pull requestes provide a code review, before changes are merged into main branch, our team members can review the propsed changes and sugguest improvements etc.. It also serve as a form of documentation for changes made to the codebase, whcich can help future developers understand the reason and context behind changes.
---- question 9 fill here ---
 
 ### Question 10
 
@@ -382,7 +381,10 @@ We used the compute enginges for training our model remotely, and also the bucke
 >
 > Answer:
 
---- question 20 fill here ---
+```markdown
+![my_image](figures/container.png)
+```
+
 
 ### Question 21
 
@@ -422,7 +424,7 @@ We used the compute enginges for training our model remotely, and also the bucke
 >
 > Answer:
 
---- question 23 fill here ---
+We implemented monitoring for the deployment. We implemented a SLO, in which a warning is sent if the response time is over 10ms for more than 20% of the requests. Furthermore was a alert set if there were more than 10 request in a second.
 
 ### Question 24
 

@@ -242,7 +242,7 @@ Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloa
 
 ### Question 11
 
-> **Discuss you continues integration setup. What kind of CI are you running (unittesting, linting, etc.)? Do you test**
+> **Discuss your continues integration setup. What kind of CI are you running (unittesting, linting, etc.)? Do you test**
 > **multiple operating systems, python version etc. Do you make use of caching? Feel free to insert a link to one of**
 > **your github actions workflow.**
 >
@@ -253,6 +253,8 @@ Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloa
 > *... . In particular for our ..., we used ... .An example of a triggered workflow can be seen here: <weblink>*
 >
 > Answer:
+
+
 
 --- question 11 fill here ---
 
@@ -272,6 +274,8 @@ Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloa
 > *We used a simple argparser, that worked in the following way: python my_script.py --lr 1e-3 --batch_size 25*
 >
 > Answer:
+
+We added a config.yaml to store the constants used in the model and for testing. We then used hydra to use the file in our unit-testing and omegaconf to use the file in our model and training. 
 
 --- question 12 fill here ---
 

@@ -219,7 +219,7 @@ We implemented 4 test. We are testing that data can be loaded, that a model be i
 > *addition to the main branch. To merge code we ...*
 >
 > Answer:
-
+ Yes, we used both branches and pull requests in our project. Each member in our group has a branch where we can work independently on different part of our project without interference with main developmet line. Isolated environment allows each developer experiment new ideas without affecting the main codebase, if the experimrnt successed, the change can be merged back into master branch. Pull requestes provide a code review, before changes are merged into main branch, our team members can review the propsed changes and sugguest improvements etc.. It also serve as a form of documentation for changes made to the codebase, whcich can help future developers understand the reason and context behind changes.
 --- question 9 fill here ---
 
 ### Question 10

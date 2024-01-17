@@ -332,7 +332,7 @@ For our project we developed two images: one for prediction and training respect
 >
 > Answer:
 
---- question 16 fill here ---
+Debugging method was dependent on group member as both Visual Studio Code and PyCharm was used. This was done by setting breakpoints at critical points to pause execution and allow us to see variables and step forward through the code line by line. Profiling was not used in our project but for continous development and work on this project it would have been a good idea to do so, in order to locate bottlenecks and optimize our code.
 
 ## Working in the cloud
 
@@ -348,6 +348,8 @@ For our project we developed two images: one for prediction and training respect
 > *We used the following two services: Engine and Bucket. Engine is used for... and Bucket is used for...*
 >
 > Answer:
+
+
 
 --- question 17 fill here ---
 

@@ -1,6 +1,7 @@
 import os
 import time
 import torch
+import wandb
 import random
 import datetime
 import pandas as pd
@@ -8,6 +9,9 @@ from torch.utils.data import DataLoader, random_split, RandomSampler, Sequential
 from project_name.models.model import Model
 from project_name.data.dataclass import GPT2Dataset
 from omegaconf import OmegaConf
+
+# if haven't login wandb
+#wandb.login()
 
 # loading
 config = OmegaConf.load("project_name/config.yaml")
@@ -20,6 +24,7 @@ parameter = {
     "batch_size": config["hyperparameters"]["batch_size"],
     # this produces sample output every 100 steps
     "sample_every": config["hyperparameters"]["sample_every"],
+    "path": config["filepath"]
 }
 
 
@@ -29,7 +34,7 @@ def format_time(elapsed):
 
 def dataloader(tokenizer, batch_size):
     df = pd.read_csv("data/processed/processed_data.csv") 
-    dataset = GPT2Dataset(df['text'], tokenizer, max_length=768)
+    dataset = GPT2Dataset(df['text'][:10], tokenizer, max_length=768)
     print(len(dataset))
     
     # Split into training and validation sets
@@ -63,18 +68,19 @@ def train():
     training_stats = []
 
     total_t0 = time.time()
-
+    wandb.init(project="mlops_g30",config= parameter)
     # A GPT model with arguments "lr" of learning rate & "eps" of epsilon
     model = Model(lr=parameter["learning_rate"], eps=parameter["epsilon"])
     tokenizer = model.tokenizer
 
+    # Tell pytorch to run this model on the GPU.
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    model = model.to(device)
+    #self.model.cuda()
+
     # Load the data
     train_dataloader, valid_dataloader = dataloader(tokenizer, parameter["batch_size"])
 
-    # Tell pytorch to run this model on the GPU.
-    device = torch.device("cuda")
-    model = model.to(device)
-    model.cuda()
 
     # this step is necessary because I've added some tokens (bos_token, etc) to the embeddings
     # otherwise the tokenizer and model tensors won't match up
@@ -105,7 +111,7 @@ def train():
         model.train()
 
         for step, batch in enumerate(train_dataloader):
-            loss = batch_train(model, batch)
+            loss = batch_train(model, device, batch)
             batch_loss = loss.item()
             total_train_loss += batch_loss
 
@@ -117,6 +123,7 @@ def train():
                         step, len(train_dataloader), batch_loss, elapsed
                     )
                 )
+                wandb.log({"Batch Loss": batch_loss})
                 sample(model)
 
             loss.backward()
@@ -139,7 +146,7 @@ def train():
 
         print("")
         print("Running Validation...")
-        avg_val_loss, validation_time = valid(model, valid_dataloader)
+        avg_val_loss, validation_time = valid(model, device, valid_dataloader)
         print("  Validation Loss: {0:.2f}".format(avg_val_loss))
         print("  Validation took: {:}".format(validation_time))
 
@@ -153,6 +160,10 @@ def train():
                 "Validation Time": validation_time,
             }
         )
+        # log metrics to wandb
+        wandb.log({"epoch": epoch_i + 1,
+                    "Training Loss": avg_train_loss,
+                    "Valid. Loss": avg_val_loss})
 
     print("")
     print("Training complete!")
@@ -162,7 +173,7 @@ def train():
     #               Save
     # ========================================
     # Saving best-practices: if you use defaults names for the model, you can reload it using from_pretrained()
-    output_dir = "models/"
+    output_dir = parameter["path"]
 
     # Create output directory if needed
     if not os.path.exists(output_dir):
@@ -171,12 +182,12 @@ def train():
     # Save a trained model, configuration and tokenizer using `save_pretrained()`.
     # They can then be reloaded using `from_pretrained()`
     model.save_model(output_dir)
+    wandb.finish()
 
-
-def batch_train(model, batch):
-    b_input_ids = batch[0]
-    b_labels = batch[0]
-    b_masks = batch[1]
+def batch_train(model, device, batch):
+    b_input_ids = batch[0].to(device)
+    b_labels = batch[0].to(device)
+    b_masks = batch[1].to(device)
 
     model.zero_grad()
 
@@ -196,7 +207,7 @@ def sample(model):
     model.train()
 
 
-def valid(model, valid_dataloader):
+def valid(model, device, valid_dataloader):
     t0 = time.time()
 
     model.eval()
@@ -205,9 +216,9 @@ def valid(model, valid_dataloader):
 
     # Evaluate data for one epoch
     for batch in valid_dataloader:
-        b_input_ids = batch[0]
-        b_labels = batch[0]
-        b_masks = batch[1]
+        b_input_ids = batch[0].to(device)
+        b_labels = batch[0].to(device)
+        b_masks = batch[1].to(device)
 
         with torch.no_grad():
             outputs = model(input_ids=b_input_ids, attention_mask=b_masks, labels=b_labels)

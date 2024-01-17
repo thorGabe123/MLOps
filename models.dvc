@@ -1,0 +1,95 @@
+outs:
+- hash: md5
+  path: models
+  files:
+  - relpath: .DS_Store
+    md5: 50f905e8f48b631740b8649b15e31b0b
+    size: 6148
+    cloud:
+      remote_storage:
+        etag: 088d8ab4c7b9e483031001
+        version_id: '1705495424206093'
+  - relpath: .gitkeep
+    md5: d41d8cd98f00b204e9800998ecf8427e
+    size: 0
+    cloud:
+      remote_storage:
+        etag: 08cb92cef2b1e483031001
+        version_id: '1705493367327051'
+  - relpath: __pycache__/model.cpython-311.pyc
+    md5: 0f912573137b3603dda71c9cb4a3c5b3
+    size: 1311
+    cloud:
+      remote_storage:
+        etag: 08ebe5e6f2b1e483031001
+        version_id: '1705493367730923'
+  - relpath: exp1/.DS_Store
+    md5: fc272a849dc3a610f62ebf581ad59f9f
+    size: 6148
+    cloud:
+      remote_storage:
+        etag: 08febfd5c7b9e483031001
+        version_id: '1705495424753662'
+  - relpath: exp1/added_tokens.json
+    md5: 875c36a545a6c60043cf4e1337ac7326
+    size: 51
+    cloud:
+      remote_storage:
+        etag: 08edd1e9f2b1e483031001
+        version_id: '1705493367777517'
+  - relpath: exp1/config.json
+    md5: de533d488a9c5ecf9614a28f899bfef2
+    size: 907
+    cloud:
+      remote_storage:
+        etag: 08f899dac7b9e483031001
+        version_id: '1705495424830712'
+  - relpath: exp1/generation_config.json
+    md5: e402a11c1ef96ce0e9463a34c5318253
+    size: 119
+    cloud:
+      remote_storage:
+        etag: 08c7ebcdc7b9e483031001
+        version_id: '1705495424628167'
+  - relpath: exp1/merges.txt
+    md5: 75a37753dd7a28a2c5df80c28bf06e4e
+    size: 456318
+    cloud:
+      remote_storage:
+        etag: 0892f083f3b1e483031001
+        version_id: '1705493368207378'
+  - relpath: exp1/model.safetensors
+    md5: 760a1db3a704ccf3845cc16fcd727baf
+    size: 497780352
+    cloud:
+      remote_storage:
+        etag: 08d9d98f87bbe483031001
+        version_id: '1705495826263257'
+  - relpath: exp1/special_tokens_map.json
+    md5: 9cff3297e767e2ee530ca7d457dd8415
+    size: 579
+    cloud:
+      remote_storage:
+        etag: 08c2fbe9f2b1e483031001
+        version_id: '1705493367782850'
+  - relpath: exp1/tokenizer_config.json
+    md5: cacd23f5436b4e7ced91de9caac8e216
+    size: 873
+    cloud:
+      remote_storage:
+        etag: 08d0c8e6f2b1e483031001
+        version_id: '1705493367727184'
+  - relpath: exp1/vocab.json
+    md5: bfe120ed87c2489c38daf0ebcf0bd64b
+    size: 999186
+    cloud:
+      remote_storage:
+        etag: 08d4f79bf3b1e483031001
+        version_id: '1705493368601556'
+  - relpath: model.py
+    md5: d1c45a234f0d517e48ce0c24c0af6dfb
+    size: 990
+    cloud:
+      remote_storage:
+        etag: 088ee4def2b1e483031001
+        version_id: '1705493367599630'

@@ -381,9 +381,8 @@ We used the compute enginges for training our model remotely, and also the bucke
 >
 > Answer:
 
-```markdown
+
 ![my_image](figures/container.png)
-```
 
 
 ### Question 21

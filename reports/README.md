@@ -348,7 +348,7 @@ To ensure the reproducibility of our experiments, we created a config file for o
 > *We used the following two services: Engine and Bucket. Engine is used for... and Bucket is used for...*
 >
 > Answer:
-
+We used the compute enginges for training our model remotely, and also the bucket to store data.
 --- question 17 fill here ---
 
 ### Question 18

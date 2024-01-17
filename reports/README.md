@@ -171,7 +171,7 @@ The project structure is based on the cookiecutter template with minimal changes
 >
 > Answer:
 
---- question 6 fill here ---
+We had PEP8 as our agreed standard of coding format. This is especially important in these larger projects in order to make code readable and maintainable. For quality purposes we have strived to make the code efficient and easily testable.
 
 ## Version control
 
@@ -237,9 +237,6 @@ We implemented 4 test. We are testing that data can be loaded, that a model be i
 
 Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloaded, processed, and stored the refined data on Google Cloud using DVC for version control. However, 'dvc pull' became a bottleneck, taking more time than downloading and processing directly from Hugging Face. Therefore, we decided to run 'making_dataset.py' to efficiently generate processed data. While DVC offers robust version control for data management, we adjusted our strategy to prioritize time efficiency given the dynamic needs of our project in retrieving and processing datasets.
 
-
---- question 10 fill here ---
-
 ### Question 11
 
 > **Discuss your continues integration setup. What kind of CI are you running (unittesting, linting, etc.)? Do you test**
@@ -253,8 +250,6 @@ Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloa
 > *... . In particular for our ..., we used ... .An example of a triggered workflow can be seen here: <weblink>*
 >
 > Answer:
-
-
 
 --- question 11 fill here ---
 
@@ -276,8 +271,6 @@ Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloa
 > Answer:
 
 We added a config.yaml to store the constants used in the model and for testing. We then used hydra to use the file in our unit-testing and omegaconf to use the file in our model and training. For prediction, we use a simple argparser "--model_version", "--prompt" and "--output_length" to give the model wanting to load, input prompt to generate and the length of the output. 
-
---- question 12 fill here ---
 
 ### Question 13
 

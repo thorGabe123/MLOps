@@ -363,7 +363,7 @@ We used the compute enginges and the Vertex AI for training our model remotely, 
 > *using a custom container: ...*
 >
 > Answer:
-
+We made use of compute Engine to train our model, the instance with Intel Haswell CPU, 50GB disk and it's located in Belgium.
 --- question 18 fill here ---
 
 ### Question 19

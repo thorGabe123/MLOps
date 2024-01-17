@@ -275,7 +275,7 @@ Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloa
 >
 > Answer:
 
-We added a config.yaml to store the constants used in the model and for testing. We then used hydra to use the file in our unit-testing and omegaconf to use the file in our model and training. 
+We added a config.yaml to store the constants used in the model and for testing. We then used hydra to use the file in our unit-testing and omegaconf to use the file in our model and training. For prediction, we use a simple argparser "--model_version", "--prompt" and "--output_length" to give the model wanting to load, input prompt to generate and the length of the output. 
 
 --- question 12 fill here ---
 
@@ -292,7 +292,7 @@ We added a config.yaml to store the constants used in the model and for testing.
 >
 > Answer:
 
---- question 13 fill here ---
+To ensure the reproducibility of our experiments, we created a config file for our hyperparameter, including batch_size, epochs, learning_rate, warmup_steps and epsilon, and logged them whenever running a experiment. This practice ensures that each run receives consistent parameter settings. We also implemented W&B so that all results can be easily tracked through the dashboard. Additionally, the use of a Docker image enhances portability, making sure the execution of experiments across various computing environments. 
 
 ### Question 14
 

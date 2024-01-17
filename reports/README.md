@@ -375,7 +375,7 @@ Debugging method was dependent on group member as both Visual Studio Code and Py
 >
 > Answer:
 
---- question 19 fill here ---
+[GCP Bucket](figures/GCP_bucket.png)
 
 ### Question 20
 
@@ -384,7 +384,7 @@ Debugging method was dependent on group member as both Visual Studio Code and Py
 >
 > Answer:
 
---- question 20 fill here ---
+[Container Registry](figures/container_registry.png)
 
 ### Question 21
 
@@ -393,7 +393,7 @@ Debugging method was dependent on group member as both Visual Studio Code and Py
 >
 > Answer:
 
---- question 21 fill here ---
+[Cloud Build History](figures/cloud_build_history.png)
 
 ### Question 22
 

@@ -66,7 +66,7 @@ end of the project.
 * [x] Used Hydra to load the configurations and manage your hyperparameters
 * [ ] When you have something that works somewhat, remember at some point to to some profiling and see if
       you can optimize your code
-* [ ] Use Weights & Biases to log training progress and other important metrics/artifacts in your code. Additionally,
+* [x] Use Weights & Biases to log training progress and other important metrics/artifacts in your code. Additionally,
       consider running a hyperparameter optimization sweep.
 * [ ] Use Pytorch-lightning (if applicable) to reduce the amount of boilerplate in your code
 
@@ -79,15 +79,15 @@ end of the project.
 * [ ] Create a data storage in GCP Bucket for you data and preferable link this with your data version control setup
 * [x] Create a trigger workflow for automatically building your docker images
 * [ ] Get your model training in GCP using either the Engine or Vertex AI
-* [ ] Create a FastAPI application that can do inference using your model
+* [x] Create a FastAPI application that can do inference using your model
 * [ ] If applicable, consider deploying the model locally using torchserve
-* [ ] Deploy your model in GCP using either Functions or Run as the backend
+* [x] Deploy your model in GCP using either Functions or Run as the backend
 
 ### Week 3
 
 * [ ] Check how robust your model is towards data drifting
-* [ ] Setup monitoring for the system telemetry of your deployed model
-* [ ] Setup monitoring for the performance of your deployed model
+* [x] Setup monitoring for the system telemetry of your deployed model
+* [x] Setup monitoring for the performance of your deployed model
 * [ ] If applicable, play around with distributed data loading
 * [ ] If applicable, play around with distributed model training
 * [ ] Play around with quantization, compilation and pruning for you trained models to increase inference speed
@@ -190,7 +190,7 @@ We had PEP8 as our agreed standard of coding format. This is especially importan
 >
 > Answer:
 
-We implemented 4 test. We are testing that data can be loaded, that a model be initialized, that a model can be tested and that the model can make predictions. 
+We implemented 4 tests. We are testing that data can be loaded, that a model be initialized, that a model can be tested and that the model can make predictions. 
 
 ### Question 8
 
@@ -219,8 +219,8 @@ We implemented 4 test. We are testing that data can be loaded, that a model be i
 > *addition to the main branch. To merge code we ...*
 >
 > Answer:
- Yes, we used both branches and pull requests in our project. Each member in our group has a branch where we can work independently on different part of our project without interference with main developmet line. Isolated environment allows each developer experiment new ideas without affecting the main codebase, if the experimrnt successed, the change can be merged back into master branch. Pull requestes provide a code review, before changes are merged into main branch, our team members can review the propsed changes and sugguest improvements etc.. It also serve as a form of documentation for changes made to the codebase, whcich can help future developers understand the reason and context behind changes.
---- question 9 fill here ---
+
+Yes, we used both branches and pull requests in our project. Each member in our group has a branch where we can work independently on different part of our project without interference with main developmet line. Isolated environment allows each developer experiment new ideas without affecting the main codebase, if the experimrnt successed, the change can be merged back into master branch. Pull requestes provide a code review, before changes are merged into main branch, our team members can review the propsed changes and sugguest improvements etc.. It also serve as a form of documentation for changes made to the codebase, which can help future developers understand the reason and context behind changes.
 
 ### Question 10
 
@@ -317,7 +317,7 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
---- question 15 fill here ---
+For our project we developed two images: one for prediction and training respectively. An example on how to run the prediction docker image: `docker run predict_model:latest`. Link to one of our docker files: https://github.com/thorGabe123/MLOps/blob/main/dockerfiles/predict_model.dockerfile. We have set up registry in GCP holding docker images created for each push to main as a form of version control. 
 
 ### Question 16
 
@@ -332,7 +332,7 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
---- question 16 fill here ---
+Debugging method was dependent on group member as both Visual Studio Code and PyCharm was used. This was done by setting breakpoints at critical points to pause execution and allow us to see variables and step forward through the code line by line. Profiling was not used in our project but for continous development and work on this project it would have been a good idea to do so, in order to locate bottlenecks and optimize our code.
 
 ## Working in the cloud
 
@@ -349,7 +349,7 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
---- question 17 fill here ---
+We used the compute enginges for training our model remotely, and also the bucket to store data.
 
 ### Question 18
 
@@ -373,7 +373,7 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
---- question 19 fill here ---
+![my_image](figures/GCP_bucket.png)
 
 ### Question 20
 
@@ -382,7 +382,9 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
---- question 20 fill here ---
+
+![my_image](figures/container.png)
+
 
 ### Question 21
 
@@ -391,7 +393,7 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
---- question 21 fill here ---
+![my_image](figures/cloud_build_history.png)
 
 ### Question 22
 
@@ -422,7 +424,7 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
---- question 23 fill here ---
+We implemented monitoring for the deployment. We implemented a SLO, in which a warning is sent if the response time is over 10ms for more than 20% of the requests. Furthermore was a alert set if there were more than 10 request in a second.
 
 ### Question 24
 
@@ -488,4 +490,9 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
---- question 27 fill here ---
+Student s203861 set up the cookie cutter project, did the initial fine-tuning of the model through colab, set up the GCP container registry, and wrote unit tests for model and training.
+Student s232855  
+Student s194638
+Student s232909
+Student s232268
+All members contributed to the project 

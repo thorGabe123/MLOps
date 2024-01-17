@@ -7,7 +7,7 @@
 PROJECT_NAME = project_name
 PYTHON_VERSION = 3.11
 PYTHON_INTERPRETER = python
-
+DIR = models
 #################################################################################
 # COMMANDS                                                                      #
 #################################################################################
@@ -31,7 +31,10 @@ clean:
 	find . -type f -name "*.py[co]" -delete
 	find . -type d -name "__pycache__" -delete
 
-
+dvc:
+	if [ ! -d "$(DIR)" ]; then \
+        dvc pull models; \
+    fi
 #################################################################################
 # PROJECT RULES                                                                 #
 #################################################################################
@@ -43,8 +46,8 @@ data:
 train: requirements
 	$(PYTHON_INTERPRETER) $(PROJECT_NAME)/train_model.py
 ## Predict the data
-predict: requirements
-	$(PYTHON_INTERPRETER) $(PROJECT_NAME)/predict_model.py
+predict: dvc requirements
+	$(PYTHON_INTERPRETER) $(PROJECT_NAME)/predict_model.py --model_version models/exp1
 	
 #################################################################################
 # Documentation RULES                                                           #

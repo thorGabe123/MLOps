@@ -116,7 +116,7 @@ def train():
             total_train_loss += batch_loss
 
             # Get sample every x batches.
-            if step % parameter["sample_every"] == 0:
+            if step % parameter["sample_every"] == 0 and not step == 0:
                 elapsed = format_time(time.time() - t0)
                 print(
                     "  Batch {:>5,}  of  {:>5,}. Loss: {:>5,}.   Elapsed: {:}.".format(

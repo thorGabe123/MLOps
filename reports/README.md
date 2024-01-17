@@ -285,7 +285,7 @@ We added a config.yaml to store the constants used in the model and for testing.
 >
 > Answer:
 
---- question 13 fill here ---
+We made use of a config.yaml file containing our hyperparameters, a requirements.txt file descriping the necessary libraries and dependencies of the environment, and Docker images creating an isolated environment with all necessary dependencies for running the experiment. To reproduce an experiment one would only have to run it in a Docker container, which is the isolated environment describing the operation system, software libraries, and code dependencies. Since GitHub has been utilized as version control, it will also be possible to track changes made to the code and reconstruct an earlier state of the experiment.
 
 ### Question 14
 

@@ -5,3 +5,5 @@ hyperparameters:
   warmup_steps: 1e2
   epsilon: 1e-8
   sample_every: 100
+filepath:
+  "models/exp1"

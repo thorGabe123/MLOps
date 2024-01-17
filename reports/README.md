@@ -114,9 +114,9 @@ Group 30
 >
 > *sXXXXXX, sXXXXXX, sXXXXXX*
 >
-> Answer:
+> Answer: 
 
-s194638, 
+s203861, s232855, s194638, s232909, s232268
 
 ### Question 3
 > **What framework did you choose to work with and did it help you complete the project?**
@@ -142,10 +142,6 @@ We used the third-part framework Transformers in our project. We used the functi
 >
 > Answer length: 100-200 words
 >
-> 
-> 
-> 
->
 > Answer:
 
 We used a requirements.txt file for managing our dependencies. The list of dependencies was auto-generated using the console line pip freeze > requirements in our virtual environment. For a new team member to aquire this environment they would only have to set up a virtual environment, install the dependencies descriped in the requirements.txt file, and clone the GitHub repository.
@@ -162,6 +158,7 @@ We used a requirements.txt file for managing our dependencies. The list of depen
 > *because we did not use any ... in our project. We have added an ... folder that contains ... for running our*
 > *experiments.*
 > Answer:
+
 The project structure is based on the cookiecutter template with minimal changes. We've filled 'dockerfiles', 'models', 'notebooks', 'project_name', and 'tests', while removing 'docs'.[Notes: if there is nothing to do with docs, we can remove that. and btw, should we removed "model1-open-text-books" folder?] The 'dockerfiles' directory contains container build scripts, 'models' stores trained model checkpoints, and 'tests' contains test cases and scripts for project testing. The 'project_name' folder includes the project's source code with essential configuration files for model training. Within 'project_name', three folders are organized for data processing, model storage, and visualization. The 'notebooks' section features a Jupyter notebook showing a rough version of the 'project_name' code.
 
 
@@ -174,7 +171,7 @@ The project structure is based on the cookiecutter template with minimal changes
 >
 > Answer:
 
---- question 6 fill here ---
+We had PEP8 as our agreed standard of coding format. This is especially important in these larger projects in order to make code readable and maintainable. For quality purposes we have strived to make the code efficient and easily testable.
 
 ## Version control
 
@@ -222,7 +219,7 @@ We implemented 4 test. We are testing that data can be loaded, that a model be i
 > *addition to the main branch. To merge code we ...*
 >
 > Answer:
-
+ Yes, we used both branches and pull requests in our project. Each member in our group has a branch where we can work independently on different part of our project without interference with main developmet line. Isolated environment allows each developer experiment new ideas without affecting the main codebase, if the experimrnt successed, the change can be merged back into master branch. Pull requestes provide a code review, before changes are merged into main branch, our team members can review the propsed changes and sugguest improvements etc.. It also serve as a form of documentation for changes made to the codebase, whcich can help future developers understand the reason and context behind changes.
 --- question 9 fill here ---
 
 ### Question 10
@@ -240,12 +237,9 @@ We implemented 4 test. We are testing that data can be loaded, that a model be i
 
 Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloaded, processed, and stored the refined data on Google Cloud using DVC for version control. However, 'dvc pull' became a bottleneck, taking more time than downloading and processing directly from Hugging Face. Therefore, we decided to run 'making_dataset.py' to efficiently generate processed data. While DVC offers robust version control for data management, we adjusted our strategy to prioritize time efficiency given the dynamic needs of our project in retrieving and processing datasets.
 
-
---- question 10 fill here ---
-
 ### Question 11
 
-> **Discuss you continues integration setup. What kind of CI are you running (unittesting, linting, etc.)? Do you test**
+> **Discuss your continues integration setup. What kind of CI are you running (unittesting, linting, etc.)? Do you test**
 > **multiple operating systems, python version etc. Do you make use of caching? Feel free to insert a link to one of**
 > **your github actions workflow.**
 >
@@ -276,7 +270,7 @@ Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloa
 >
 > Answer:
 
---- question 12 fill here ---
+We added a config.yaml to store the constants used in the model and for testing. We then used hydra to use the file in our unit-testing and omegaconf to use the file in our model and training. For prediction, we use a simple argparser "--model_version", "--prompt" and "--output_length" to give the model wanting to load, input prompt to generate and the length of the output. 
 
 ### Question 13
 
@@ -291,7 +285,7 @@ Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloa
 >
 > Answer:
 
---- question 13 fill here ---
+To ensure the reproducibility of our experiments, we created a config file for our hyperparameter, including batch_size, epochs, learning_rate, warmup_steps and epsilon, and logged them whenever running a experiment. This practice ensures that each run receives consistent parameter settings. We also implemented W&B so that all results can be easily tracked through the dashboard. Additionally, the use of a Docker image enhances portability, making sure the execution of experiments across various computing environments. 
 
 ### Question 14
 

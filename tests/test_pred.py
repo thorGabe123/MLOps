@@ -1,5 +1,3 @@
-import sys
-sys.path.append('C:\\Users\\min\\Documents\\GitHub\\MLOps')
 from project_name.predict_model import make_prediction
 from project_name.models.model import Model
 

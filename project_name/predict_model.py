@@ -1,4 +1,8 @@
 import torch
+import sys
+import os
+directory = os.getcwd()
+sys.path.insert(0,directory)
 from project_name.models.model import Model
 import click
 

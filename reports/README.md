@@ -317,7 +317,7 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
-For our project we developed two images: one for prediction and training respectively. An example on how to run the prediction docker image: `docker run predict_model:latest`. Link to one of our docker files: https://github.com/thorGabe123/MLOps/blob/main/dockerfiles/predict_model.dockerfile. 
+For our project we developed two images: one for prediction and training respectively. An example on how to run the prediction docker image: `docker run predict_model:latest`. Link to one of our docker files: https://github.com/thorGabe123/MLOps/blob/main/dockerfiles/predict_model.dockerfile. We have set up registry in GCP holding docker images created for each push to main as a form of version control. 
 
 ### Question 16
 

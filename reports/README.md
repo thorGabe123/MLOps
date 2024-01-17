@@ -190,7 +190,7 @@ We had PEP8 as our agreed standard of coding format. This is especially importan
 >
 > Answer:
 
-We implemented 4 test. We are testing that data can be loaded, that a model be initialized, that a model can be tested and that the model can make predictions. 
+We implemented 4 tests. We are testing that data can be loaded, that a model be initialized, that a model can be tested and that the model can make predictions. 
 
 ### Question 8
 
@@ -219,7 +219,8 @@ We implemented 4 test. We are testing that data can be loaded, that a model be i
 > *addition to the main branch. To merge code we ...*
 >
 > Answer:
- Yes, we used both branches and pull requests in our project. Each member in our group has a branch where we can work independently on different part of our project without interference with main developmet line. Isolated environment allows each developer experiment new ideas without affecting the main codebase, if the experimrnt successed, the change can be merged back into master branch. Pull requestes provide a code review, before changes are merged into main branch, our team members can review the propsed changes and sugguest improvements etc.. It also serve as a form of documentation for changes made to the codebase, whcich can help future developers understand the reason and context behind changes.
+
+Yes, we used both branches and pull requests in our project. Each member in our group has a branch where we can work independently on different part of our project without interference with main developmet line. Isolated environment allows each developer experiment new ideas without affecting the main codebase, if the experimrnt successed, the change can be merged back into master branch. Pull requestes provide a code review, before changes are merged into main branch, our team members can review the propsed changes and sugguest improvements etc.. It also serve as a form of documentation for changes made to the codebase, which can help future developers understand the reason and context behind changes.
 
 ### Question 10
 
@@ -489,4 +490,9 @@ We implemented monitoring for the deployment. We implemented a SLO, in which a w
 >
 > Answer:
 
---- question 27 fill here ---
+Student s203861 set up the cookie cutter project, did the initial fine-tuning of the model through colab, set up the GCP container registry, and wrote unit tests for model and training.
+Student s232855  
+Student s194638
+Student s232909
+Student s232268
+All members contributed to code by 

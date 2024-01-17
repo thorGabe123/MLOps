@@ -372,7 +372,7 @@ We used the compute enginges for training our model remotely, and also the bucke
 >
 > Answer:
 
-[GCP Bucket](figures/GCP_bucket.png)
+![my_image](figures/GCP_bucket.png)
 
 ### Question 20
 
@@ -392,7 +392,7 @@ We used the compute enginges for training our model remotely, and also the bucke
 >
 > Answer:
 
-[Cloud Build History](figures/cloud_build_history.png)
+![my_image](figures/cloud_build_history.png)
 
 ### Question 22
 

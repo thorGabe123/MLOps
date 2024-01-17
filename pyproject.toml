@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project_name"
+version = "0.0.1"
+description = "Fine-tuning a GPT2 text-generation model."
+authors = [
+  { name = "Gabe, Thor Bjørn Olmedo", email = "s203861@student.dtu.dk" },
+  { name = "Cheng, Ting-Hui", email = "s232855@student.dtu.dk" },
+  { name = "Nielsen, Christopher Hardi", email = "s194638@student.dtu.dk" },
+  { name = "Wang, Depei", email = "s232909@student.dtu.dk" },
+  { name = "Xie, Zhenlin", email = "s232268@student.dtu.dk" }
+]
+
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = ["dependencies", "optional-dependencies"]
+
+[tool.setuptools]
+packages = ["project_name"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.dynamic.optional-dependencies]
+dev = {file = ['requirements_dev.txt']}
+
+[tool.ruff]
+line-length = 120

@@ -1,6 +1,8 @@
 import torch
 import sys
-sys.path.insert(0,'C:\\Users\\min\\Documents\\GitHub\\MLOps')
+import os
+directory = os.getcwd()
+sys.path.insert(0,directory)
 from project_name.models.model import Model
 import click
 

@@ -495,4 +495,4 @@ Student s232855
 Student s194638
 Student s232909
 Student s232268
-All members contributed to code by 
+All members contributed to the project 

@@ -308,9 +308,9 @@ To ensure the reproducibility of our experiments, we created a config file for o
 
 ![my_image](figures/wandb.png)
 ![my_image](figures/wandb_1.png)
-In the first two images, we present the results of five distinct experiments and each results is configured with different parameters, as detailed in the second image. We used the loss metric, both training loss and validation loss, in W&B to keep an eye on how well the performance of our machine learning models were. During our training, we measure loss as the negative log-likelihood, a crucial metric that reflects how effectively the model predicts the target variable. The first image shows us that most experiments have an increase in validation, indicating a overfitting problem. However, exp4 stood out to be the one that is not overfitting.
+In the first two images, we present the results of five distinct experiments and each results is configured with different parameters, as detailed in the second image. We used the loss metric in Weights & Biases to keep an eye on how well the performance of our machine learning models was. This encompassed both training loss and validation loss, crucial indicators evaluated through the lens of negative log-likelihood. During our training, we measure loss as the negative log-likelihood, a crucial metric that reflects how effectively the model predicts the target variable. In the first picture, we can see that the majority of experiments have a decrease in training but an increase in validation. This pattern suggests a potential overfitting problem, where the model becomes overly fixated on the training data and doesn't generalize well to new, unseen data. However, exp4 stands out as an exception, which doesn't have that overfitting issue.
 ![my_image](figures/wandb_2.png)
-In the third figure, we zoom in for a closer look to track the evolution we're interested in. It reveals that the training loss consistently decreases with each epoch, but the validation loss starts to increase after the third epoch.
+In the third figure, we zoom in for a closer look to track the evolution we're interested in. It reveals that training loss consistently decreases with each epoch. However, after the third epoch, validation loss starts to increase. This detailed view helps us find things we can make better in our model and guides us in adjusting it to perform even better overall.
 
 ### Question 15
 
@@ -506,7 +506,7 @@ Student s232909 ued $18.6 credits,..., compute engine service was the most expen
 
 Student s203861 set up the cookie cutter project, did the initial fine-tuning of the model through colab, set up the GCP container registry, and wrote unit tests for model and training.
 
-Student s232855  
+Student s232855 contributed to model,train & docker script, set up GCP bucket and trained the model in vm, Vertex AI and colab.
 
 Student s194638
 

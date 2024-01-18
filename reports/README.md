@@ -384,7 +384,6 @@ We used the compute enginges for training our model remotely, and also the bucke
 >
 > Answer:
 
-
 ![my_image](figures/container.png)
 
 
@@ -461,7 +460,9 @@ We implemented monitoring for the deployment. We implemented a SLO, in which a w
 >
 > Answer:
 
---- question 25 fill here ---
+![my_image](figures/overview.png)
+
+The starting point of the diagram is the 
 
 ### Question 26
 

@@ -375,7 +375,10 @@ We used the compute enginges with configured necessary e.g. CPU, GPU and memory,
 >
 > Answer:
 
-We attempted to utilize both Compute Engine and Vertex AI for training purposes, but the prolonged approval process for GPU resources made it challenging. With CPU-based training taking more than four days without completion, we eventually opted for Colab for a quicker and more accessible training experience.
+We attempted to utilize both Compute Engine and Vertex AI for training purposes, but the prolonged approval process for GPU resources made it challenging. With CPU-based training taking more than four days without completion, we eventually opted for Colab for a quicker and more accessible training experience. 
+
+While the challenges with GPU resource approval on Compute Engine hindered our training progress, for future use, we would opt for Vertex AI or Compute Engine since it offers a more streamlined solution for machine learning tasks and is better suited for continuous integration. Using Google Cloud is also better suited for ensuring reproducibility and suited for our purpose, so the future focus would be to move the training of the model to Google Cloud. As mentioned, it is more suited for continuous integration since it uses the containers from the container registry that are being built automatically when a push is made to the GitHub main branch.
+
 
 ![my_image](figures/vertex_ai.png)
 

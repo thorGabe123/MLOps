@@ -11,11 +11,16 @@ COPY pyproject.toml pyproject.toml
 COPY project_name/ project_name/
 COPY Makefile Makefile
 
+
 WORKDIR /
 RUN pip install -r requirements.txt --no-cache-dir
 RUN pip install . --no-deps --no-cache-dir
 RUN pip install -e . 
 
-RUN mkdir -p /data/processed
-RUN make data 
-ENTRYPOINT ["python", "-u", "project_name/predict_model.py"] 
+RUN dvc init --no-scm
+COPY .dvc .dvc
+COPY models.dvc models.dvc
+COPY data.dvc data.dvc
+RUN dvc config core.no_scm true
+RUN make predict
+#ENTRYPOINT ["python", "-u", "project_name/predict_model.py" "--model_version", "models/exp1"] 

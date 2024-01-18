@@ -455,7 +455,7 @@ To keep a close eye on our deployment, we set up monitoring measures. We establi
 >
 > Answer:
 
-Student s232855 used $22.7, s232909 used $18.6 credits, s194638 used $2.63, s203861 used $0.95 credits, and the service that cost the most was the compute engine service. These credits are all in association with GCP.
+Student s232855 used $22.7, s232909 used $18.6 credits, s194638 used $2.63, s203861 used $1.2 credits, and the service that cost the most was the compute engine service. These credits are all in association with GCP.
 
 ## Overall discussion of project
 
@@ -519,4 +519,4 @@ Student s232909 was in charge of model visualision part, and tried to bulid the 
 
 Student s232268
 
-All members contributed to the project by
+All members contributed to the project by 

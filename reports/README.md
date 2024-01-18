@@ -161,7 +161,7 @@ We streamlined our dependency management process by utilizing a requirements.txt
 > *experiments.*
 > Answer:
 
-The project structure is based on the cookiecutter template with minimal changes. We've filled 'dockerfiles', 'models', 'notebooks', 'project_name', and 'tests', while removing 'docs'. The 'dockerfiles' directory contains container build scripts, 'models' stores trained model checkpoints, and 'tests' contains test cases and scripts for project testing. The 'project_name' folder includes the project's source code with essential configuration files for model training. Within 'project_name', three folders are organized for data processing, model storage, and visualization. The 'notebooks' section features a Jupyter notebook showing a rough version of the 'project_name' code.
+Our project structure was initialized with the cookiecutter template, with minimal modifications tailored to our needs. Key directories include 'dockerfiles' housing container build scripts, 'models' storing fine-tuned models and 'tests' containing scripts for different unittest for our projects, to be run both locally and using Github actions. The 'project_name' folder encompasses the project's source code and crucial configuration files for model training. Within 'project_name', we organized three folders for data processing, model creation, and visualization, optimizing project scalability and maintenance. Notably, a 'notebooks' section showcases a Jupyter notebook offering a preliminary version of the 'project_name' code. We introduced an 'App' folder to facilitate our FastAPI app, a significant addition enhancing project functionality. Additionally, a '.github' folder was created to streamline workflows for GitHub actions, contributing to efficient project development and collaboration. The enhancements to the initial project structure are made to expand on the general functionality, to improve process in the MLOps field and streamline development process.
 
 
 ### Question 6
@@ -192,7 +192,7 @@ In our project, we adhered to the PEP8 coding standard to ensure a uniform and r
 >
 > Answer:
 
-In our testing framework, we have designed and implemented four key tests to ensure the robust functionality of our system. The first test  testing that data can be loaded successfully. Subsequently, we verify the proper initialization of the model. The third test focuses on assessing the model's performance during testing, while the fourth examines its predictive capabilities. 
+In our testing framework, we have designed and implemented four key tests to ensure the robust functionality of our system. The first test are testing that data can be loaded successfully. Subsequently, we verify the proper initialization of the model. The third test focuses on assessing the model's performance during testing, while the fourth examines its predictive capabilities. 
 
 ### Question 8
 
@@ -224,7 +224,7 @@ The total code coverage of our code is 55%, which includes all our source code. 
 >
 > Answer:
 
-Yes, we used both branches and pull requests in our project. Each member in our group has a branch where we can work independently on different part of our project without interference with main developmet line. Isolated environment allows each developer experiment new ideas without affecting the main codebase, if the experimrnt successed, the change can be merged back into master branch. Pull requestes provide a code review, before changes are merged into main branch, our team members can review the propsed changes and sugguest improvements etc.. It also serve as a form of documentation for changes made to the codebase, which can help future developers understand the reason and context behind changes.
+Yes, we used both branches and pull requests in our project. Each member in our group has a branch where we can work independently on different part of our project without interference with main development line. Isolated environment allows each developer experiment new ideas without affecting the main codebase, if the experiment successed, the change can be merged back into master branch. Pull requestes provide a code review, before changes are merged into main branch, our team members can review the proposed changes and sugguest improvements etc.. It also serves as a form of documentation for changes made to the codebase, which can help future developers understand the reason and context behind changes.
 
 ### Question 10
 

@@ -159,7 +159,7 @@ We used a requirements.txt file for managing our dependencies. The list of depen
 > *experiments.*
 > Answer:
 
-The project structure is based on the cookiecutter template with minimal changes. We've filled 'dockerfiles', 'models', 'notebooks', 'project_name', and 'tests', while removing 'docs'.[Notes: if there is nothing to do with docs, we can remove that. and btw, should we removed "model1-open-text-books" folder?] The 'dockerfiles' directory contains container build scripts, 'models' stores trained model checkpoints, and 'tests' contains test cases and scripts for project testing. The 'project_name' folder includes the project's source code with essential configuration files for model training. Within 'project_name', three folders are organized for data processing, model storage, and visualization. The 'notebooks' section features a Jupyter notebook showing a rough version of the 'project_name' code.
+The project structure is based on the cookiecutter template with minimal changes. We've filled 'dockerfiles', 'models', 'notebooks', 'project_name', and 'tests', while removing 'docs'. The 'dockerfiles' directory contains container build scripts, 'models' stores trained model checkpoints, and 'tests' contains test cases and scripts for project testing. The 'project_name' folder includes the project's source code with essential configuration files for model training. Within 'project_name', three folders are organized for data processing, model storage, and visualization. The 'notebooks' section features a Jupyter notebook showing a rough version of the 'project_name' code.
 
 
 ### Question 6

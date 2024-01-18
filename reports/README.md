@@ -255,7 +255,10 @@ In our project, we grapple with a sizable 152 MB dataset sourced from Hugging Fa
 >
 > Answer:
 
---- question 11 fill here ---
+We have added our unit testing to a GitHub workflow to make a unit test using GitHub actions when there is a push or pull request to the main branch. This ensures that the functions can still run upon adding new code to the codebase. The GitHub actions I run using Python 3.11 and Ubuntu-latest. More Python versions or OS could have been added here to get a broader test and ensure that it works on more systems and using different Python versions. Currently with our project development, the group decided on using Python 3.11 in the virtual environment, so we would probably prioritize more OS options if we were to expand since we currently are using different OS in the group. One GitHub Action in our main branch that ran successfully is accessible on https://github.com/thorGabe123/MLOps/actions/runs/7568880558/job/20610986848, where it set on an environment according to the requirements, runs the different tests, and then caches the dependencies for future usages in the next GitHub Action upon the next push or pull request.
+
+We also build a docker-compose.yaml file and set up Google Cloud Build, which upon new pushes to the main branch in our Github main branch builds a docker image using files in the GitHub. These docker images are then stored in the container registry and can be used for other purposes in Google Cloud in Vertex AI or Compute engine for training or Cloud Run and Cloud functions to run code as backend.
+
 
 ## Running code and tracking experiments
 

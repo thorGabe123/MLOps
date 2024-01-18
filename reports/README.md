@@ -289,7 +289,7 @@ We added a config.yaml to store the constants used in the model and for testing.
 >
 > Answer:
 
-To ensure the reproducibility of our experiments, we created a config file for our hyperparameter, including batch_size, epochs, learning_rate, warmup_steps and epsilon, and logged them whenever running a experiment. This practice ensures that each run receives consistent parameter settings. We also implemented W&B so that all results can be easily tracked through the dashboard. Additionally, the use of a Docker image enhances portability, making sure the execution of experiments across various computing environments. 
+In our efforts to guarantee the reproducibility of our experiments, we developed a configuration file containing essential hyperparameters such as batch size, epochs, learning rate, warmup steps, and epsilon. Every time we conduct an experiment, these parameters are logged, ensuring that each run maintains consistent settings. To streamline result tracking, we've incorporated W&B (Weights & Biases), allowing easy monitoring through a user-friendly dashboard. Furthermore, we've embraced Docker technology to create a portable image, enhancing the flexibility of our experiments across different computing environments. This combination of meticulous parameter logging, W&B integration, and Docker utilization fortifies the reliability and adaptability of our experimental processes.
 
 ### Question 14
 

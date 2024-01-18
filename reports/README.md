@@ -521,5 +521,3 @@ Student s194638 was responsible for creating prediction script, setting up unitt
 Student s232909 was in charge of model visualision part, and tried to bulid the training docker image in vritual machine and run it in Vertex AI.
 
 Student s232268
-
-All members contributed to the project by

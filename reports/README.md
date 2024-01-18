@@ -255,7 +255,10 @@ In our project, we grapple with a sizable 152 MB dataset sourced from Hugging Fa
 >
 > Answer:
 
---- question 11 fill here ---
+We have added our unit testing to a GitHub workflow to make a unit test using GitHub actions when there is a push or pull request to the main branch. This ensures that the functions can still run upon adding new code to the codebase. The GitHub actions I run using Python 3.11 and Ubuntu-latest. More Python versions or OS could have been added here to get a broader test and ensure that it works on more systems and using different Python versions. Currently with our project development, the group decided on using Python 3.11 in the virtual environment, so we would probably prioritize more OS options if we were to expand since we currently are using different OS in the group. One GitHub Action in our main branch that ran successfully is accessible on https://github.com/thorGabe123/MLOps/actions/runs/7568880558/job/20610986848, where it set on an environment according to the requirements, runs the different tests, and then caches the dependencies for future usages in the next GitHub Action upon the next push or pull request.
+
+We also build a docker-compose.yaml file and set up Google Cloud Build, which upon new pushes to the main branch in our Github main branch builds a docker image using files in the GitHub. These docker images are then stored in the container registry and can be used for other purposes in Google Cloud in Vertex AI or Compute engine for training or Cloud Run and Cloud functions to run code as backend.
+
 
 ## Running code and tracking experiments
 
@@ -325,7 +328,7 @@ In the third figure, we zoom in for a closer look to track the evolution we're i
 >
 > Answer:
 
-For our project we developed two images: one for prediction and training respectively. An example on how to run the prediction docker image: `docker run predict_model:latest`. Link to one of our docker files: `docker image pull tronys/predict_model:latest`. We have set up registry in GCP holding docker images created for each push to main as a form of version control. 
+For our project, we developed two images: one for prediction and training respectively. An example of how to run the prediction docker image: docker run predict_model:latest. Link to one of our docker files: docker image pull tronys/predict_model:latest. We have set up registry in GCP holding docker images created for each push to main as a form of version control. We also has a docker container for our API inference, that can be run using docker run --platform linux/amd64 -p 8080:8080 app:latest locally and it stored on Goole Container registry and can therefore be pulled down by using docker pull gcr.io/dtumlops-410808/api-app:latest. Lastly we have our training docker image, that can be run using docker run train:latest.
 
 ### Question 16
 
@@ -340,7 +343,7 @@ For our project we developed two images: one for prediction and training respect
 >
 > Answer:
 
-Debugging method was dependent on group member as both Visual Studio Code and PyCharm was used. This was done by setting breakpoints at critical points to pause execution and allow us to see variables and step forward through the code line by line. Profiling was not used in our project but for continous development and work on this project it would have been a good idea to do so, in order to locate bottlenecks and optimize our code.
+In our project, debugging was a collaborative effort, relying on the expertise of group members who used both Visual Studio Code and PyCharm. We employed a method involving the strategic placement of breakpoints at crucial points in the code, allowing us to pause execution and examine variables. This step-by-step approach, where we could navigate through the code line by line, proved effective in identifying and resolving issues. While we didn't utilize profiling for our project, considering the ongoing development and work, incorporating it could have been beneficial. Profiling helps pinpoint bottlenecks, offering insights to optimize our code and enhance overall efficiency, contributing to a smoother and more streamlined project development process.
 
 ## Working in the cloud
 
@@ -422,7 +425,8 @@ For our model deployment, it involved wrapping or model within an API utilizing 
 
 curl -X 'GET' 'https://api-app-nyxex64l4a-lz.a.run.app/generated/?prompt={your_prompt_here}' -H 'accept: text/html'
 
-This command facilitates direct engagement with the API backend. Our deployment strategy ensures user-friendly access, accommodating both those inclined wanting graphical interfaces and those preferring command-line interactions.
+This command facilitates direct engagement with the API backend. Our deployment strategy ensures user-friendly access, accommodating both those inclined to want graphical interfaces and those preferring command-line interactions. One of the advantages of going from local to cloud is that the model is accessible from everywhere and can be run without setting up anything locally. The text generator is always accessible, but that also has some cost. Every API request uses Google Cloud Credits, so although it’s a lot easier to use, it also comes with some cost since it does not use a local machine already running.
+
 
 ### Question 23
 
@@ -437,7 +441,7 @@ This command facilitates direct engagement with the API backend. Our deployment 
 >
 > Answer:
 
-We implemented monitoring for the deployment. We implemented a SLO, in which a warning is sent if the response time is over 10ms for more than 20% of the requests. Furthermore was a alert set if there were more than 10 request in a second.
+To keep a close eye on our deployment, we set up monitoring measures. We established a Service Level Objective (SLO) to ensure smooth performance, triggering a warning if the response time exceeds 10 milliseconds for over 20% of the requests. This helps us catch any potential slowdowns and address them promptly. Additionally, we put in place an alert system that notifies us if there are more than 10 requests in a second. This quick alert helps us stay on top of sudden spikes in demand or unexpected activity, allowing us to respond swiftly and maintain a reliable and responsive deployment for our users.
 
 ### Question 24
 
@@ -509,7 +513,7 @@ Student s203861 set up the cookie cutter project, did the initial fine-tuning of
 
 Student s232855 contributed to model,train & docker script, set up GCP bucket and trained the model in vm, Vertex AI and colab.
 
-Student s194638
+Student s194638 was responsible for creating prediction script, setting up unittest for data processing and predict, creating API for local deployment and Google Run for Cloud deployment.
 
 Student s232909 was in charge of model visualision part, and tried to bulid the training docker image in vritual machine and run it in Vertex AI.
 

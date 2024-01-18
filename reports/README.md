@@ -239,7 +239,7 @@ Yes, we used both branches and pull requests in our project. Each member in our 
 >
 > Answer:
 
-Our project deals with a 152 MB dataset from Hugging Face. Initially, we downloaded, processed, and stored the refined data on Google Cloud using DVC for version control. However, 'dvc pull' became a bottleneck, taking more time than downloading and processing directly from Hugging Face. Therefore, we decided to run 'making_dataset.py' to efficiently generate processed data. While DVC offers robust version control for data management, we adjusted our strategy to prioritize time efficiency given the dynamic needs of our project in retrieving and processing datasets.
+In our project, we grapple with a sizable 152 MB dataset sourced from Hugging Face. Initially, we followed a meticulous process: downloading, refining, and storing the data on Google Cloud using DVC for version control. However, we encountered a bottleneck during the 'dvc pull' operation, which surprisingly took more time compared to direct downloading and processing from Hugging Face. To address this challenge, we made a strategic decision to enhance efficiency by directly running the 'making_dataset.py' script. While DVC remains invaluable for robust version control and data management, we adjusted our approach to prioritize time efficiency, aligning with the dynamic requirements of our project for swift retrieval and processing of datasets.
 
 ### Question 11
 

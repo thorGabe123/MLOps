@@ -351,7 +351,7 @@ Debugging method was dependent on group member as both Visual Studio Code and Py
 >
 > Answer:
 
-We used the compute enginges for training our model remotely, and also the bucket to store data.
+We used the compute enginges with configured necessary e.g. CPU, GPU and memory, to train our model remotely. And also the Cloud Bucket to store our training data, allowing us to keep tracke of different version of dataset and models. GCP container registry allows us to store and manage Docker container images, and similar to Bucket, it supports version contral to manage containerized models.
 
 ### Question 18
 

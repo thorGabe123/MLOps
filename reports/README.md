@@ -450,8 +450,8 @@ We implemented monitoring for the deployment. We implemented a SLO, in which a w
 > *costing the most was ... due to ...*
 >
 > Answer:
-Student s232909 ued $18.6 credits,..., compute engine service was the most expensive one.
---- question 24 fill here ---
+
+Student s232855 used $22.7, s232909 used $18.6 credits, s194638 used $2.63, s203861 used $0.95 credits, and the service that cost the most was the compute engine service. These credits are all in association with GCP.
 
 ## Overall discussion of project
 

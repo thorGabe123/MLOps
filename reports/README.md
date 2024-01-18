@@ -439,7 +439,7 @@ We implemented monitoring for the deployment. We implemented a SLO, in which a w
 > *costing the most was ... due to ...*
 >
 > Answer:
-
+Student s232909 ued $18.6 credits,..., compute engine service was the most expensive one.
 --- question 24 fill here ---
 
 ## Overall discussion of project

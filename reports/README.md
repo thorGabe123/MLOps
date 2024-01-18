@@ -425,7 +425,8 @@ For our model deployment, it involved wrapping or model within an API utilizing 
 
 curl -X 'GET' 'https://api-app-nyxex64l4a-lz.a.run.app/generated/?prompt={your_prompt_here}' -H 'accept: text/html'
 
-This command facilitates direct engagement with the API backend. Our deployment strategy ensures user-friendly access, accommodating both those inclined wanting graphical interfaces and those preferring command-line interactions.
+This command facilitates direct engagement with the API backend. Our deployment strategy ensures user-friendly access, accommodating both those inclined to want graphical interfaces and those preferring command-line interactions. One of the advantages of going from local to cloud is that the model is accessible from everywhere and can be run without setting up anything locally. The text generator is always accessible, but that also has some cost. Every API request uses Google Cloud Credits, so although it’s a lot easier to use, it also comes with some cost since it does not use a local machine already running.
+
 
 ### Question 23
 

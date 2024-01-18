@@ -192,7 +192,7 @@ In our project, we adhered to the PEP8 coding standard to ensure a uniform and r
 >
 > Answer:
 
-In our testing framework, we have designed and implemented four key tests to ensure the robust functionality of our system. The first test  testing that data can be loaded successful.Subsequently, we verify the proper initialization of the model. The third test focuses on assessing the model's performance during testing, while the fourth examines its predictive capabilities. 
+In our testing framework, we have designed and implemented four key tests to ensure the robust functionality of our system. The first test  testing that data can be loaded successfully. Subsequently, we verify the proper initialization of the model. The third test focuses on assessing the model's performance during testing, while the fourth examines its predictive capabilities. 
 
 ### Question 8
 

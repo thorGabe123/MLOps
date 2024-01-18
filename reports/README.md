@@ -190,7 +190,7 @@ We had PEP8 as our agreed standard of coding format. This is especially importan
 >
 > Answer:
 
-We implemented 4 tests. We are testing that data can be loaded, that a model be initialized, that a model can be tested and that the model can make predictions. 
+In our testing framework, we have designed and implemented four key tests to ensure the robust functionality of our system. The first test  testing that data can be loaded successful.Subsequently, we verify the proper initialization of the model. The third test focuses on assessing the model's performance during testing, while the fourth examines its predictive capabilities. 
 
 ### Question 8
 

@@ -343,7 +343,7 @@ For our project we developed two images: one for prediction and training respect
 >
 > Answer:
 
-Debugging method was dependent on group member as both Visual Studio Code and PyCharm was used. This was done by setting breakpoints at critical points to pause execution and allow us to see variables and step forward through the code line by line. Profiling was not used in our project but for continous development and work on this project it would have been a good idea to do so, in order to locate bottlenecks and optimize our code.
+In our project, debugging was a collaborative effort, relying on the expertise of group members who used both Visual Studio Code and PyCharm. We employed a method involving the strategic placement of breakpoints at crucial points in the code, allowing us to pause execution and examine variables. This step-by-step approach, where we could navigate through the code line by line, proved effective in identifying and resolving issues. While we didn't utilize profiling for our project, considering the ongoing development and work, incorporating it could have been beneficial. Profiling helps pinpoint bottlenecks, offering insights to optimize our code and enhance overall efficiency, contributing to a smoother and more streamlined project development process.
 
 ## Working in the cloud
 

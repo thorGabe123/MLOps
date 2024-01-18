@@ -5,6 +5,10 @@ outs:
   - relpath: .DS_Store
     md5: 680d5140d528d7a4d5efbf8b3a693d29
     size: 8196
+    cloud:
+      remote_storage:
+        etag: 08dea0c29adfe683031001
+        version_id: '1705574250090590'
   - relpath: exp1/added_tokens.json
     md5: 875c36a545a6c60043cf4e1337ac7326
     size: 51
@@ -169,6 +173,10 @@ outs:
   - relpath: exp4/.DS_Store
     md5: 51b789f90347f3c64e3bd68ac0798e93
     size: 6148
+    cloud:
+      remote_storage:
+        etag: 088eabce9adfe683031001
+        version_id: '1705574250288526'
   - relpath: exp4/added_tokens.json
     md5: 875c36a545a6c60043cf4e1337ac7326
     size: 51
@@ -200,6 +208,10 @@ outs:
   - relpath: exp4/model.safetensors
     md5: 77093ed792f9207638fbd0f684b5cb53
     size: 497780352
+    cloud:
+      remote_storage:
+        etag: 0899f2f6a3e0e683031001
+        version_id: '1705574538262809'
   - relpath: exp4/special_tokens_map.json
     md5: 9cff3297e767e2ee530ca7d457dd8415
     size: 579

@@ -348,7 +348,6 @@ To ensure the reproducibility of our experiments, we created a config file for o
 > *We used the following two services: Engine and Bucket. Engine is used for... and Bucket is used for...*
 >
 > Answer:
-We used the compute enginges and the Vertex AI for training our model remotely, and also the trigger to automatically build the images.
 --- question 17 fill here ---
 
 ### Question 18
@@ -363,7 +362,6 @@ We used the compute enginges and the Vertex AI for training our model remotely, 
 > *using a custom container: ...*
 >
 > Answer:
-We made use of compute Engine to train our model, the instance with Intel Haswell CPU, 50GB disk and it's located in Belgium.
 --- question 18 fill here ---
 
 ### Question 19

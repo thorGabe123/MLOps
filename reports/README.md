@@ -411,7 +411,9 @@ We used the compute enginges with configured necessary e.g. CPU, GPU and memory,
 >
 > Answer:
 
---- question 22 fill here ---
+For deployment we wrapped our model in an API using FastApi inside a Docker container. This worked locally and was then deployed in Google Cloud Run. It can be accessed on https://api-app-nyxex64l4a-lz.a.run.app with some light UI or directly using curl -X 'GET' \
+  'https://api-app-nyxex64l4a-lz.a.run.app/generated/?prompt={prompt here}' \
+  -H 'accept: text/html' for using the API backend only.
 
 ### Question 23
 

@@ -4,16 +4,16 @@
 The goal of the project is to fine-tune a model to generate comprehensive paragraphs continuing on an initial text prompt.
 
 ## What framework are you going to use?
-Working with NLP, we plan to use the Transformers framework.
+We will be working with NLP, so we plan to use the Transformers framework. This selected based on Transformer having packages that contain pretrainted model with tokenizer, that can be used in our project. We Will also be using a dataset on huggingface, so we will be using the Transformer framework to handle data processing, which should make it for a better process that handling it using pandas and torch alone.
 
 ## How do you intend to include the framework into your project
 We expect to start with a pretrained model and fine-tune it by training it on our data.
 
 ## What data are you going to run on?
-We utilize a dataset of publicly available text books as found from https://huggingface.co/datasets/izumi-lab/open-text-books containing raw texts of the books.
+We utilize a dataset of publicly available text books as found from https://huggingface.co/datasets/izumi-lab/open-text-books containing raw texts of the books. The books in this dataset differ in content and should be good for creating a model that will generate text that would be suitable for new books.
 
 ## What deep learning models do you expect to use?
-We are going to use a pretrained GPT2 text-generating model as found at https://huggingface.co/gpt2, and fine-tune it by training on our dataset. 
+We are going to use a pretrained GPT2 text-generating model as found at https://huggingface.co/gpt2, and fine-tune it by training on our dataset. The Transformer framework will be used in this process since the model is taking for their framework, we will also be using the optimzer from the Transformer framework.
 
 
 ## Project structure

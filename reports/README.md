@@ -512,7 +512,7 @@ Student s203861 set up the cookie cutter project, did the initial fine-tuning of
 
 Student s232855 contributed to model,train & docker script, set up GCP bucket and trained the model in vm, Vertex AI and colab.
 
-Student s194638
+Student s194638 was responsible for creating prediction script, setting up unittest for data processing and predict, creating API for local deployment and Google Run for Cloud deployment.
 
 Student s232909 was in charge of model visualision part, and tried to bulid the training docker image in vritual machine and run it in Vertex AI.
 

@@ -441,7 +441,7 @@ This command facilitates direct engagement with the API backend. Our deployment 
 >
 > Answer:
 
-We implemented monitoring for the deployment. We implemented a SLO, in which a warning is sent if the response time is over 10ms for more than 20% of the requests. Furthermore was a alert set if there were more than 10 request in a second.
+To keep a close eye on our deployment, we set up monitoring measures. We established a Service Level Objective (SLO) to ensure smooth performance, triggering a warning if the response time exceeds 10 milliseconds for over 20% of the requests. This helps us catch any potential slowdowns and address them promptly. Additionally, we put in place an alert system that notifies us if there are more than 10 requests in a second. This quick alert helps us stay on top of sudden spikes in demand or unexpected activity, allowing us to respond swiftly and maintain a reliable and responsive deployment for our users.
 
 ### Question 24
 

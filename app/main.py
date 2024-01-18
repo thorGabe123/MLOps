@@ -35,7 +35,7 @@ async def get_prompt():
 
 @app.get("/generated/", response_class=HTMLResponse)
 async def generate_text(prompt: str = Query(..., title="Prompt")):
-    model = Model(model_version='models/MLOps data')
+    model = Model(model_version='models/exp6')
     predicted_text = make_prediction(model, prompt, 100)
 
     html_content = f"""

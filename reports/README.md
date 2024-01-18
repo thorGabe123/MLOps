@@ -319,7 +319,7 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
-For our project we developed two images: one for prediction and training respectively. An example on how to run the prediction docker image: `docker run predict_model:latest`. Link to one of our docker files: https://github.com/thorGabe123/MLOps/blob/main/dockerfiles/predict_model.dockerfile. We have set up registry in GCP holding docker images created for each push to main as a form of version control. 
+For our project we developed two images: one for prediction and training respectively. An example on how to run the prediction docker image: `docker run predict_model:latest`. Link to one of our docker files: `docker image pull tronys/predict_model:latest`. We have set up registry in GCP holding docker images created for each push to main as a form of version control. 
 
 ### Question 16
 
@@ -462,7 +462,7 @@ We implemented monitoring for the deployment. We implemented a SLO, in which a w
 
 ![my_image](figures/overview.png)
 
-The starting point of the diagram is the 
+For a developer, when writing new code they would add it to GitHub with the actions pre-commit, commit, and push. This will then update the github repository with the pushed code. Whenever we commit code and push it to GitHub, it activates the GitHub action 'run test' that will make sure all our unit tests still succeed after the newly pushed code. The file responsible for this action is test.yaml. A commit to the main branch will also trigger a docker build in GCP. This will result in 2 docker image being created as specified by the predict_model.dockerfile and train_model.dockerfile. These docker images will then be added to the container registry of GCP. 
 
 ### Question 26
 

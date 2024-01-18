@@ -417,9 +417,11 @@ We attempted to utilize both Compute Engine and Vertex AI for training purposes,
 >
 > Answer:
 
-For deployment we wrapped our model in an API using FastApi inside a Docker container. This worked locally and was then deployed in Google Cloud Run. It can be accessed on https://api-app-nyxex64l4a-lz.a.run.app with some light UI or directly using curl -X 'GET' \
-  'https://api-app-nyxex64l4a-lz.a.run.app/generated/?prompt={prompt here}' \
-  -H 'accept: text/html' for using the API backend only.
+For our model deployment, it involved wrapping or model within an API utilizing FastApi inside a Docker container. Following successful local implementation, the deployment was transitioned to a Google Cloud Run. The API is accessible at https://api-app-nyxex64l4a-lz.a.run.app, featuring an intuitive user interface. Alternatively, for command-line interaction, the following curl command is employed:
+
+curl -X 'GET' 'https://api-app-nyxex64l4a-lz.a.run.app/generated/?prompt={your_prompt_here}' -H 'accept: text/html'
+
+This command facilitates direct engagement with the API backend. Our deployment strategy ensures user-friendly access, accommodating both those inclined wanting graphical interfaces and those preferring command-line interactions.
 
 ### Question 23
 

@@ -22,5 +22,5 @@ COPY .dvc .dvc
 COPY models.dvc models.dvc
 COPY data.dvc data.dvc
 RUN dvc config core.no_scm true
-RUN make predict
-#ENTRYPOINT ["python", "-u", "project_name/predict_model.py" "--model_version", "models/exp1"] 
+RUN dvc pull models
+ENTRYPOINT ["python", "-u", "project_name/predict_model.py", "--model_version","models/exp4"] 

@@ -375,7 +375,10 @@ We used the compute enginges with configured necessary e.g. CPU, GPU and memory,
 >
 > Answer:
 
-We attempted to utilize both Compute Engine and Vertex AI for training purposes, but the prolonged approval process for GPU resources made it challenging. With CPU-based training taking more than four days without completion, we eventually opted for Colab for a quicker and more accessible training experience.
+We attempted to utilize both Compute Engine and Vertex AI for training purposes, but the prolonged approval process for GPU resources made it challenging. With CPU-based training taking more than four days without completion, we eventually opted for Colab for a quicker and more accessible training experience. 
+
+While the challenges with GPU resource approval on Compute Engine hindered our training progress, for future use, we would opt for Vertex AI or Compute Engine since it offers a more streamlined solution for machine learning tasks and is better suited for continuous integration. Using Google Cloud is also better suited for ensuring reproducibility and suited for our purpose, so the future focus would be to move the training of the model to Google Cloud. As mentioned, it is more suited for continuous integration since it uses the containers from the container registry that are being built automatically when a push is made to the GitHub main branch.
+
 
 ![my_image](figures/vertex_ai.png)
 
@@ -492,7 +495,12 @@ For a developer, when writing new code they would add it to GitHub with the acti
 >
 > Answer:
 
---- question 26 fill here ---
+One of the main challenge, which took us the most time, is dealing with GPU issues in our group. Unfortunately,since all of us are still waiting for approval from Google Cloud to access a GPU, we can't carry out our training on the Google Cloud Platform as planned. To work around this, we decided to use "GCP Cloud Build" to build our predict image, while conducting our training on Colab using the provided script:https://github.com/thorGabe123/MLOps/blob/main/notebooks/colab.ipynb. However, Colab comes with its own limitation. The platform has a limitation where users get automatically logged out after a prolonged training period. Consequently, to adapt to this constraint, we had to compromise on training with a subset of our data, randomly selecting 3000 samples. Building on the cloud remains the best solution if we have a GPU.
+
+In addition to the GPU challenge, we've faced complexities with DVC (Data Version Control). Specifically, when building a Docker image on the cloud, downloading training data from the bucket using DVC proved to be time-consuming. To streamline the process, we shifted to using a script for efficient generation of processed data rather than relying on DVC. 
+
+Another challenge surfaced with Docker. Although we could successfully create a Docker image for local deployment, deploying it on the cloud triggered port errors. After some adjustments, we were finally able to successfully deploy our model on the cloud. 
+
 
 ### Question 27
 
@@ -511,12 +519,10 @@ For a developer, when writing new code they would add it to GitHub with the acti
 
 Student s203861 set up the cookie cutter project, did the initial fine-tuning of the model through colab, set up the GCP container registry, and wrote unit tests for model and training.
 
-Student s232855 contributed to model,train & docker script, set up GCP bucket and trained the model in vm, Vertex AI and colab.
+Student s232855 contributed to model, train & docker script, set up GCP bucket and trained the model in vm, Vertex AI & colab, and analysed the results in W&B.
 
 Student s194638 was responsible for creating prediction script, setting up unittest for data processing and predict, creating API for local deployment and Google Run for Cloud deployment.
 
 Student s232909 was in charge of model visualision part, and tried to bulid the training docker image in vritual machine and run it in Vertex AI.
 
 Student s232268
-
-All members contributed to the project by 

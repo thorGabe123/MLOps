@@ -129,7 +129,9 @@ s203861, s232855, s194638, s232909, s232268
 >
 > Answer:
 
-We used the third-part framework Transformers in our project. We used the functionality load_dataset from the datasets package to load a dataset from the Hugging Face sit. Furthermore did we use different functionalities from the transformer package to get config, pre-trrained model and tokenizer of the GPT2 model. We also got our optimizer AdamW from the Transformer package.
+In our project, we integrated the third-party framework Transformers, leveraging its versatile functionalities. The use of the load_dataset function from the datasets package facilitated the loading of a dataset directly from the Hugging Face repository, streamlining our data preparation process. Additionally, we used different features within the transformer package to obtain the configuration settings, pre-trained model, and tokenizer for the powerful GPT-2 model. This not only expedited the setup of our natural language processing tasks but also ensured compatibility with state-of-the-art language models. Furthermore, the incorporation of the AdamW optimizer from the Transformer package optimized our model training process, enhancing overall performance and convergence. The comprehensive utilization of these tools exemplifies the efficiency and robustness afforded by the Transformers framework in our project development.
+
+We also used the notebook on https://colab.research.google.com/drive/13dZVYEOMhXhkXWfvSMVM1TTtUDrT6Aeh?usp=sharing#scrollTo=_EYFrNxr-TYb as a starting point for our code and was the basis of our notebook, that later was used as basis for our code.
 
 ## Coding environment
 

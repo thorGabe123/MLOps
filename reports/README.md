@@ -304,7 +304,11 @@ To ensure the reproducibility of our experiments, we created a config file for o
 >
 > Answer:
 
---- question 14 fill here ---
+![my_image](figures/wandb.png)
+![my_image](figures/wandb_1.png)
+In the first two images, we present the results of five distinct experiments and each results is configured with different parameters, as detailed in the second image. We used the loss metric, both training loss and validation loss, in W&B to keep an eye on how well the performance of our machine learning models were. During our training, we measure loss as the negative log-likelihood, a crucial metric that reflects how effectively the model predicts the target variable. The first image shows us that most experiments have an increase in validation, indicating a overfitting problem. However, exp4 stood out to be the one that is not overfitting.
+![my_image](figures/wandb_2.png)
+In the third figure, we zoom in for a closer look to track the evolution we're interested in. It reveals that the training loss consistently decreases with each epoch, but the validation loss starts to increase after the third epoch.
 
 ### Question 15
 
@@ -366,7 +370,9 @@ We used the compute enginges with configured necessary e.g. CPU, GPU and memory,
 >
 > Answer:
 
---- question 18 fill here ---
+We attempted to utilize both Compute Engine and Vertex AI for training purposes, but the prolonged approval process for GPU resources made it challenging. With CPU-based training taking more than four days without completion, we eventually opted for Colab for a quicker and more accessible training experience.
+
+![my_image](figures/vertex_ai.png)
 
 ### Question 19
 

@@ -205,7 +205,9 @@ We implemented 4 tests. We are testing that data can be loaded, that a model be 
 >
 > Answer:
 
---- question 8 fill here ---
+![my_image](figures/code_coverage.png)
+
+The total code coverage of our code is 55%, which includes all our source code. This means that a significant part of our code is not being tested and could therefore contain bugs. Were we to have a code coverage of 100% then it would be a good indicator of code quality, but it would not guarantee that no errors are present. Errors can come in all shapes and sizes and it is impossible to account for them all, and where unit tests can assure that specific parts of the code functions in a specific way, it could never assure an error-free-code. Also, achieving 100% code coverage can be misleading as you could in principle check only the intended and functioning use cases and still achieve 100% code coverage, never to test fail cases and tougher situations.
 
 ### Question 9
 
@@ -491,8 +493,13 @@ We implemented monitoring for the deployment. We implemented a SLO, in which a w
 > Answer:
 
 Student s203861 set up the cookie cutter project, did the initial fine-tuning of the model through colab, set up the GCP container registry, and wrote unit tests for model and training.
+
 Student s232855  
+
 Student s194638
+
 Student s232909
+
 Student s232268
-All members contributed to the project 
+
+All members contributed to the project by

@@ -498,7 +498,7 @@ Student s232855
 
 Student s194638
 
-Student s232909
+Student s232909 was in charge of model visualision part, and tried to bulid the training docker image in vritual machine and run it in Vertex AI.
 
 Student s232268
 

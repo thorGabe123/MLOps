@@ -173,7 +173,7 @@ The project structure is based on the cookiecutter template with minimal changes
 >
 > Answer:
 
-We had PEP8 as our agreed standard of coding format. This is especially important in these larger projects in order to make code readable and maintainable. For quality purposes we have strived to make the code efficient and easily testable.
+In our project, we adhered to the PEP8 coding standard to ensure a uniform and readable codebase, crucial for larger projects. This commitment to a consistent coding format enhances maintainability. Emphasizing code quality, we focused on optimizing efficiency and creating code that is easily testable. This approach not only promotes collaborative development but also contributes to a higher standard of code hygiene and overall project robustness.
 
 ## Version control
 

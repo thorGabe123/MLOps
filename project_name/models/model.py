@@ -9,9 +9,7 @@ config = OmegaConf.load("project_name/config.yaml")
 lr = config["hyperparameters"]["learning_rate"]
 eps = config["hyperparameters"]["epsilon"]
 
-#####
 
-#####
 
 class Model(torch.nn.Module):
     def __init__(self, lr=lr, eps=eps, model_version="gpt2"):

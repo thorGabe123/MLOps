@@ -328,7 +328,7 @@ In the third figure, we zoom in for a closer look to track the evolution we're i
 >
 > Answer:
 
-For our project, we developed two images: one for prediction and training respectively. An example of how to run the prediction docker image: docker run predict_model:latest. Link to one of our docker files: docker image pull tronys/predict_model:latest. We have set up registry in GCP holding docker images created for each push to main as a form of version control. We also has a docker container for our API inference, that can be run using docker run --platform linux/amd64 -p 8080:8080 app:latest locally and it stored on Goole Container registry and can therefore be pulled down by using docker pull gcr.io/dtumlops-410808/api-app:latest. Lastly we have our training docker image, that can be run using docker run train:latest.
+For our project, we developed two images: one for prediction and training respectively. An example of how to run the prediction docker image: `docker run tronys/predict_model:latest`. Link to one of our docker files: `docker image pull tronys/predict_model:latest`. We have set up registry in GCP holding docker images created for each push to main as a form of version control. We also has a docker container for our API inference, that can be run using docker run --platform linux/amd64 -p 8080:8080 app:latest locally and it stored on Goole Container registry and can therefore be pulled down by using docker pull gcr.io/dtumlops-410808/api-app:latest. Lastly we have our training docker image, that can be run using docker run train:latest.
 
 ### Question 16
 
